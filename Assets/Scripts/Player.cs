@@ -12,10 +12,6 @@ public class Player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Start() {
-        
-    }
-
     void Update() {
         /*Mecânica de corrida*/
         if (Input.GetKey(KeyCode.LeftShift)) {
@@ -34,8 +30,10 @@ public class Player : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        Vector2 vectorResult = new Vector2(movementVector.x, movementVector.y).normalized;
-        rb.velocity = (vectorResult * speed);
+        if (!DialogueController.GetInstance().dialogueActive) {    //Se não estiver no meio de um diálogo
+            Vector2 vectorResult = new Vector2(movementVector.x, movementVector.y).normalized;
+            rb.velocity = (vectorResult * speed);
+        }
     }
 
 }

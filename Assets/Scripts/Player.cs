@@ -30,10 +30,11 @@ public class Player : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (!DialogueController.GetInstance().dialogueActive) {    //Se não estiver no meio de um diálogo
-            Vector2 vectorResult = new Vector2(movementVector.x, movementVector.y).normalized;
-            rb.velocity = (vectorResult * speed);
-        }
+        Vector2 vectorResult = new Vector2(0, 0);
+        if (!DialogueController.GetInstance().dialogueActive)    //Se não estiver no meio de um diálogo
+            vectorResult = new Vector2(movementVector.x, movementVector.y).normalized;
+
+        rb.velocity = (vectorResult * speed);
     }
 
 }

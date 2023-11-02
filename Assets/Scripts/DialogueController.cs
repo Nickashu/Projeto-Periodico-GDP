@@ -5,20 +5,22 @@ using TMPro;
 using UnityEngine;
 
 public class DialogueController : MonoBehaviour {    //Esta classe será única para todo o projeto (singleton class)
-
     private static DialogueController instance;
 
+    public TextAsset variablesJSON;    //Este é o arquivo JSON do ink que contém todas as variáveis de diálogo
     public GameObject ImgCharacterDialogue, DialogueBoxContainer;
     public TextMeshProUGUI txtDialogue, txtNameCharacter;
     public GameObject[] choices;
-    private TextMeshProUGUI[] choicesTxt;
+    public DialogueVariablesController dialogueVariablesController { get; private set; }
 
+    private TextMeshProUGUI[] choicesTxt;
     private Story dialogue;
 
+    private bool endLine = false;   //Esta variável é responsável por guardar se cada linha do diálogo já terminou ou ainda não
     private float textSpeed = 0.05f;
     private int indexLine;
+
     public bool dialogueActive { get; private set; }   //Quero que esta variável possa ser lida por outros scripts, mas não modificada
-    private bool endLine = false;   //Esta variável é responsável por guardar se cada linha do diálogo já terminou ou ainda não
 
     public static DialogueController GetInstance() {
         return instance;
@@ -29,6 +31,9 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
             instance = this;
         else 
             Destroy(gameObject);
+
+        //Ao carregar pela primeira vez, precisamos carregar as variáveis criadas no ink para o código. Faço isso chamando o próprio construtor da classe DialogueVariablesController:
+        dialogueVariablesController = new DialogueVariablesController(variablesJSON);
     }
 
     void Start() {
@@ -56,9 +61,10 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
     }
 
     public void StartDialogue(TextAsset dialogueJSON) {
-        dialogueActive = true;
         dialogue = new Story(dialogueJSON.text);        //Carregando o diálogo a partir do arquivo JSON passado de parâmetro
+        dialogueActive = true;
         DialogueBoxContainer.SetActive(true);
+        dialogueVariablesController.StartListening(dialogue);  //Para detectar as mudanças de variáveis no diálogo
 
         if (dialogue.canContinue) {
             dialogue.Continue();
@@ -77,10 +83,8 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
         }
         else {
             if (dialogue.currentChoices.Count == 0) {
-                if (!dialogue.canContinue) {     //Se estiver no final do diálogo
-                    DialogueBoxContainer.SetActive(false);
-                    dialogueActive = false;
-                }
+                if (!dialogue.canContinue)     //Se estiver no final do diálogo
+                    EndDialogue();
                 else {
                     dialogue.Continue();
                     StartCoroutine(PrintDialogue());
@@ -101,6 +105,13 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
             yield return new WaitForSeconds(textSpeed);
         }
         endLine = true;
+    }
+
+    private void EndDialogue() {
+        txtDialogue.text = "";
+        DialogueBoxContainer.SetActive(false);
+        dialogueActive = false;
+        dialogueVariablesController.StopListening(dialogue);  //Para parar de detectar as mudanças de variáveis no diálogo
     }
 
 
@@ -124,10 +135,8 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
             choice.SetActive(false);
         }
 
-        if (!dialogue.canContinue) {     //Se estiver no final do diálogo
-            DialogueBoxContainer.SetActive(false);
-            dialogueActive = false;
-        }
+        if (!dialogue.canContinue)     //Se estiver no final do diálogo
+            EndDialogue();
         else {
             dialogue.Continue();
             StartCoroutine(PrintDialogue());
@@ -139,7 +148,7 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
         string characterName = "", spriteCharacter = "";
         foreach(string tag in tagsDialogueLine) {
             if (tag.Split(":")[0].Trim() == "character")
-                characterName = tag.Split(":")[1].Trim();
+                characterName = tag.Split(":")[1].Trim().ToUpper();
             else if (tag.Split(":")[0].Trim() == "state")
                 spriteCharacter = tag.Split(":")[1].Trim();
         }

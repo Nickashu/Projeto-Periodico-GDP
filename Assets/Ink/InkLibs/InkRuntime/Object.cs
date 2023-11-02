@@ -234,6 +234,10 @@ namespace Ink.Runtime
             return !(a == b);
         }
 
+        public static implicit operator Object(bool v) {
+            throw new NotImplementedException();
+        }
+
         /// Required for implicit bool comparison
         public override bool Equals (object obj)
         {

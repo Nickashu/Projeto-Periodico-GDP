@@ -55,11 +55,20 @@ public class Player : MonoBehaviour {
 
     //Funções para checar se o player se aproximou o suficiente de um NPC para acionar o diálogo:
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.tag == "NPC") {
+        if(collision.tag == "NPC") {    //Aqui será detectado quando a hitbox de diálogo enconstar no NPC
             if (contInteracoes == 0)
                 txtTutorialInteractions.gameObject.SetActive(true);
             triggerDialogue = collision.gameObject.GetComponent<DialogueTrigger>();
             Debug.Log("Entrou hitbox diálogo");
+        }
+
+        if (collision.tag == "Item") {    //Aqui será detectado quando o player tocar no item, já que foi configurado para que não haja detecção entre colisão do hitbox de diálogo com itens
+            
+            if (collision.gameObject.name == "comidaCorvo")
+                DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComidaCorvo");
+
+
+            collision.gameObject.SetActive(false);
         }
     }
 

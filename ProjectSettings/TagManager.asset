@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HitboxDialogo
   - NPC
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - HitBoxDialogue
+  - Item
   - 
   - 
   - 

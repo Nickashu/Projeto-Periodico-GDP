@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - HitboxDialogo
   - NPC
   - Item
+  - TrashOpened
+  - TrashClosed
   layers:
   - Default
   - TransparentFX

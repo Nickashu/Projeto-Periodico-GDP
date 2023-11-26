@@ -85,7 +85,7 @@ public class Player : MonoBehaviour {
             if (collision.gameObject.name == "comidaCorvo")
                 DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComidaCorvo");
 
-            collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
             Debug.Log("Tocou comida!!");
         }
     }
@@ -98,7 +98,9 @@ public class Player : MonoBehaviour {
         }
         if (collision.tag == "NPC")
             triggerDialogue = null;
-        if (collision.tag == "TrashClosed")
+        if (collision.tag == "TrashClosed") {
+            scriptTrash.stopSearchingFood();
             scriptTrash = null;
+        }
     }
 }

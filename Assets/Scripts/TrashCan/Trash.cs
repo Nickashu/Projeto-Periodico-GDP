@@ -27,7 +27,8 @@ public class Trash : MonoBehaviour {
 
     public void endSearchFood() {
         searchBar.gameObject.SetActive(false);
-        anim.SetBool("open", true);
+        if(anim != null)   //Se não for a lixeira de palhaço (que não tem animação ao ser aberta)
+            anim.SetBool("open", true);
         gameObject.tag = "TrashOpened";
         food.SetActive(true);
     }

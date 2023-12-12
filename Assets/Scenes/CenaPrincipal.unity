@@ -702,11 +702,11 @@ PrefabInstance:
       objectReference: {fileID: -597366584, guid: b7f9139cf26474c4f971d02d5c8e4098, type: 3}
     - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.71875
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.03125
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
@@ -1499,7 +1499,7 @@ Transform:
   m_GameObject: {fileID: 956272788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.42, y: 0, z: 0}
-  m_LocalScale: {x: 0.23, y: 0.24, z: 0.45261997}
+  m_LocalScale: {x: 0.23, y: 0.24, z: 0.45262}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1059957866}
@@ -1599,18 +1599,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.32317138, y: 1.2273018}
+  m_Offset: {x: 0.49512208, y: 1.2754354}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.57, y: 0.31}
-    oldSize: {x: 10.152009, y: 8.250001}
+    pivot: {x: 0.7, y: 0.3}
+    oldSize: {x: 7.66, y: 7.45}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.8206706, y: 7.927171}
+  m_Size: {x: 6.4767694, y: 7.830904}
   m_EdgeRadius: 0
 --- !u!95 &956272795
 Animator:
@@ -1815,8 +1815,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059957865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 21.171173, y: 21.171173, z: 21.171173}
+  m_LocalPosition: {x: 0, y: 0.62, z: 0}
+  m_LocalScale: {x: 17, y: 17, z: 17.01572}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 956272790}
@@ -3386,11 +3386,11 @@ PrefabInstance:
       objectReference: {fileID: 183352370, guid: b7f9139cf26474c4f971d02d5c8e4098, type: 3}
     - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.640625
+      value: 2.97
       objectReference: {fileID: 0}
     - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.625
+      value: 1.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cce07cd1c0443be40b095c0e65891c19
+guid: 4baf2b0a3a4750d4c93de4a3bd775d5e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2_4
+      name: Projeto (20231203015440)_4
       rect:
         serializedVersion: 2
-        x: 508
-        y: 438
-        width: 741
-        height: 741
+        x: 504
+        y: 442
+        width: 739
+        height: 730
       alignment: 9
-      pivot: {x: 0.69, y: 0.3}
+      pivot: {x: 0.6933602, y: 0.2844618}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01493d0d6f96ac54997c79ab30eede6c
-      internalID: 1304058504
+      spriteID: 0bde8fe18112ed34d9b4da4aad53fa98
+      internalID: -1145515509
       vertices: []
       indices: 
       edges: []
@@ -136,16 +136,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      2_0: 755269717
-      2_1: -1791395333
-      2_2: -1892825816
-      2_3: -1152001245
-      2_4: 1304058504
-      2_5: 2022261773
-      2_6: -1495390614
-      2_7: 1397489940
-      2_8: 1260483094
-      2_9: 422404447
+      Projeto (20231203015440)_0: 1427535382
+      Projeto (20231203015440)_1: -490108391
+      Projeto (20231203015440)_2: -1693700664
+      Projeto (20231203015440)_3: -1174542905
+      Projeto (20231203015440)_4: -1145515509
+      Projeto (20231203015440)_5: 644008604
+      Projeto (20231203015440)_6: 139119039
+      Projeto (20231203015440)_7: 395927552
+      Projeto (20231203015440)_8: 754106718
+      Projeto (20231203015440)_9: -343200352
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

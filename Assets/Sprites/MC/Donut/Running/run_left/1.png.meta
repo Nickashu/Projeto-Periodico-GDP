@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 840270250f372e94d802b667038fd737
+guid: 9fc44d36bc550694e9731627d834ff37
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1_0
+      name: Projeto (20231203125233)_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 499
-        width: 1371
-        height: 809
+        x: 103
+        y: 497
+        width: 1554
+        height: 785
       alignment: 9
-      pivot: {x: 0.3654555, y: 0.3388202}
+      pivot: {x: 0.43770617, y: 0.3141785}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc7c810c56af714b989156bc6fb373b
-      internalID: 908524224
+      spriteID: fa750b4eda3a92b439e8ff79e8066551
+      internalID: -683227729
       vertices: []
       indices: 
       edges: []
@@ -136,8 +136,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      1_0: 908524224
-      1_1: 1065649018
+      Projeto (20231203125233)_0: -683227729
+      Projeto (20231203125233)_1: 1164867457
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

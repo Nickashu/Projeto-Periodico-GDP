@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5bd34f7745e4f814498788312507d3d2
+guid: 6707562868e59bf4a98e8afd603995a5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3_8
+      name: Projeto (20231203012610)_8
       rect:
         serializedVersion: 2
-        x: 1376
-        y: 427
-        width: 552
-        height: 749
+        x: 1381
+        y: 429
+        width: 546
+        height: 745
       alignment: 9
-      pivot: {x: 0.599, y: 0.299}
+      pivot: {x: 0.5875193, y: 0.29349563}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4590ffe58fb84243a6cbd7737484073
-      internalID: -434688725
+      spriteID: ac511f203dd5e2646b30f50a77dd4745
+      internalID: 1073074328
       vertices: []
       indices: 
       edges: []
@@ -136,22 +136,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      3_0: -2122213745
-      3_1: 380207959
-      3_10: 1950295613
-      3_11: 447326731
-      3_12: 290609342
-      3_13: -1335278072
-      3_14: -205419280
-      3_15: 1625105839
-      3_2: 240630546
-      3_3: -113013
-      3_4: 1735334564
-      3_5: -520784529
-      3_6: -2028144209
-      3_7: -1982184514
-      3_8: -434688725
-      3_9: -1803713264
+      Projeto (20231203012610)_0: 1687213822
+      Projeto (20231203012610)_1: 1193028279
+      Projeto (20231203012610)_10: -29554098
+      Projeto (20231203012610)_11: -1584212865
+      Projeto (20231203012610)_12: 1561647814
+      Projeto (20231203012610)_13: 584022044
+      Projeto (20231203012610)_14: -448534329
+      Projeto (20231203012610)_15: -2090288953
+      Projeto (20231203012610)_2: -1926288833
+      Projeto (20231203012610)_3: 1410539
+      Projeto (20231203012610)_4: 670617098
+      Projeto (20231203012610)_5: 1457871612
+      Projeto (20231203012610)_6: 1714162061
+      Projeto (20231203012610)_7: 475755109
+      Projeto (20231203012610)_8: 1073074328
+      Projeto (20231203012610)_9: -1987667034
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

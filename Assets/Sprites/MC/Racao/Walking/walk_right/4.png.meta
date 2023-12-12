@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eca96aaba0f2939409e53f6afd8f053a
+guid: 60f773949496aec4d96d0199d29e75f0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4_0
+      name: "ra\xE7\xE3o andando lado 4_0"
       rect:
         serializedVersion: 2
         x: 565
-        y: 501
-        width: 928
-        height: 819
+        y: 502
+        width: 1090
+        height: 818
       alignment: 9
-      pivot: {x: 0.59253204, y: 0.27865663}
+      pivot: {x: 0.50981224, y: 0.27772504}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c25616a56f673eb46ac3e08c465ee30a
-      internalID: 552999152
+      spriteID: 9dd1340caf62c684792d8f545543e2e9
+      internalID: 357169217
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      4_0: 552999152
+      "ra\xE7\xE3o andando lado 4_0": 357169217
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

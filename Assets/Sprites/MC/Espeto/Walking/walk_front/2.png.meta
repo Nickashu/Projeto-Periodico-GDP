@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 233e970b4545bbe44a69f6b35dff9635
+guid: 70949d83f4dde714cb78da7bf73659ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2_0
+      name: espeto andando frente 2_0
       rect:
         serializedVersion: 2
         x: 602
         y: 500
         width: 624
         height: 819
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5947948, y: 0.42989975}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f62ef175cb79e444bc29d2f99ebcd51
-      internalID: 594984240
+      spriteID: ff6deb4031328754cb761daa7f4f5a18
+      internalID: 707166043
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      2_0: 594984240
+      espeto andando frente 2_0: 707166043
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

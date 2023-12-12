@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 86f4d2c279ffad24ea43c5505b5ebefb
+guid: 253112d71ad0edd4d8f1b24dd2adc144
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 5_0
+      name: sorvete andando costas 5_0
       rect:
         serializedVersion: 2
-        x: 619
-        y: 500
-        width: 630
-        height: 822
+        x: 5
+        y: 503
+        width: 631
+        height: 821
       alignment: 9
-      pivot: {x: 0.6, y: 0.3}
+      pivot: {x: 0.5965283, y: 0.29713854}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5c7b43c4dd126147a897b194830af00
-      internalID: -548531529
+      spriteID: 8149cd26ce00bc84c8b6f5bc8f3ebad6
+      internalID: -1052127664
       vertices: []
       indices: 
       edges: []
@@ -136,10 +136,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      5_0: -548531529
-      5_1: 916444873
-      5_2: -758170836
-      5_3: 1027007540
+      sorvete andando costas 5_0: -1052127664
+      sorvete andando costas 5_1: 643928958
+      sorvete andando costas 5_2: 1372771566
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

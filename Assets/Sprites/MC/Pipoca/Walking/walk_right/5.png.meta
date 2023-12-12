@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 228ab8a0380f43b4493afc9e9d2ccbc3
+guid: 624b7023ca2adcd4f808b285642e7b52
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 5_0
+      name: pipoca andando lado 5_0
       rect:
         serializedVersion: 2
-        x: 1471
+        x: 1236
         y: 502
-        width: 928
-        height: 819
+        width: 1111
+        height: 820
       alignment: 9
-      pivot: {x: 0.59595925, y: 0.27865672}
+      pivot: {x: 0.503523, y: 0.27883866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 831b103fab01f6b4bb38fda508ffc97e
-      internalID: -296500659
+      spriteID: 40957bc5b2bcf4f47bc0622d37c841d1
+      internalID: -220969433
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      5_0: -296500659
+      pipoca andando lado 5_0: -220969433
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

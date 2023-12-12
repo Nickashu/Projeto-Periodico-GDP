@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ead192a01e32acd4b8ce456d3949ecdd
+guid: a1c1ff73e4b10fd479bff1b51e1223c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3_2
+      name: "ra\xE7\xE3o andando costas 3_2"
       rect:
         serializedVersion: 2
         x: 1226
@@ -113,14 +113,14 @@ TextureImporter:
         width: 630
         height: 820
       alignment: 9
-      pivot: {x: 0.6, y: 0.3}
+      pivot: {x: 0.59635746, y: 0.29722074}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48caef02e0a2fee4688d8999edd3f2d7
-      internalID: 1177692602
+      spriteID: 3a2e714f8bbb66b4e8cd7b4e1618955d
+      internalID: -1753120840
       vertices: []
       indices: 
       edges: []
@@ -136,10 +136,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      3_0: 769688919
-      3_1: -1113626790
-      3_2: 1177692602
-      3_3: -1413092548
+      "ra\xE7\xE3o andando costas 3_0": 811172899
+      "ra\xE7\xE3o andando costas 3_1": -1643662837
+      "ra\xE7\xE3o andando costas 3_2": -1753120840
+      "ra\xE7\xE3o andando costas 3_3": 1288078704
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

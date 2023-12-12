@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa235847995d6a945a28089648300978
+guid: 446733396db12844196bc68789a22120
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4_0
+      name: donut andando costas 4_0
       rect:
         serializedVersion: 2
         x: 5
         y: 503
-        width: 632
-        height: 822
+        width: 633
+        height: 820
       alignment: 9
-      pivot: {x: 0.6, y: 0.3}
+      pivot: {x: 0.59484553, y: 0.28749448}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a0a38bc2b41b8544b2fe0e69ebd6d4e
-      internalID: 19935335
+      spriteID: 5b76979bc8d4bd2429ddd44c7d046cc0
+      internalID: -6637864
       vertices: []
       indices: 
       edges: []
@@ -136,9 +136,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      4_0: 19935335
-      4_1: 1233359362
-      4_2: -462978096
+      donut andando costas 4_0: -6637864
+      donut andando costas 4_1: -2026589028
+      donut andando costas 4_2: 353454055
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 301b2902d5939614090b52c910fb3158
+guid: 042e4f04007dd544fbd07272022c860f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 5_0
+      name: sorvete andando 5_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 502
-        width: 928
+        x: 180
+        y: 503
+        width: 984
         height: 819
       alignment: 9
-      pivot: {x: 0.39375976, y: 0.28253993}
+      pivot: {x: 0.42602658, y: 0.2757888}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08da3fe553ba0784b8cd80a717c55811
-      internalID: -165341821
+      spriteID: e8115d086fb3e4640ab222ae19c12d28
+      internalID: -429932431
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      5_0: -165341821
+      sorvete andando 5_0: -429932431
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

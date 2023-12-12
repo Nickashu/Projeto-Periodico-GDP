@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58ff6faf6a07eda4e8edd424281ef751
+guid: dce539fecca2ce54ab4a54cc0a40a649
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3_0
+      name: "salsich\xE3o andando lado 3_0"
       rect:
         serializedVersion: 2
-        x: 1471
-        y: 503
-        width: 928
-        height: 818
+        x: 1276
+        y: 502
+        width: 1043
+        height: 819
       alignment: 9
-      pivot: {x: 0.57882375, y: 0.28227416}
+      pivot: {x: 0.5170749, y: 0.27240357}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1551d04f65ace14429efa6c742b4f01b
-      internalID: -1185322211
+      spriteID: 484d0d0930c4b88408709d5b2f1da783
+      internalID: 336750013
       vertices: []
       indices: 
       edges: []
@@ -136,8 +136,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      3_0: -1185322211
-      3_1: 848340525
+      "salsich\xE3o andando lado 3_0": 336750013
+      "salsich\xE3o andando lado 3_1": -2141769407
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

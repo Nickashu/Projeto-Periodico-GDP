@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb3c6db99ec78114c805dc27857ff279
+guid: 4cc347a5bf4948c4393b51f8fbc85039
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1_0
+      name: pipoca andando costas 1_0
       rect:
         serializedVersion: 2
         x: 5
         y: 502
         width: 632
-        height: 824
+        height: 821
       alignment: 9
-      pivot: {x: 0.6, y: 0.3}
+      pivot: {x: 0.5962439, y: 0.29625818}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc404f541a35a64cb748c3c139a1a00
-      internalID: 803860057
+      spriteID: b7068c5e951303a40a5bb176e5b6009d
+      internalID: 1273672936
       vertices: []
       indices: 
       edges: []
@@ -136,9 +136,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      1_0: 803860057
-      1_1: -1636993773
-      1_2: -545606034
+      pipoca andando costas 1_0: 1273672936
+      pipoca andando costas 1_1: -404913757
+      pipoca andando costas 1_2: 548664424
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

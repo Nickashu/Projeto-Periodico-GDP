@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2bba2fee15a98c44a78d94caf4e5ac3
+guid: 8940bc5528d0bbe40adc0dbc2c79d1c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2_2
+      name: "salsich\xE3o andando costas 2_2"
       rect:
         serializedVersion: 2
         x: 614
         y: 502
-        width: 631
-        height: 822
+        width: 630
+        height: 821
       alignment: 9
-      pivot: {x: 0.6, y: 0.3}
+      pivot: {x: 0.597752, y: 0.29602364}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f964cb02c1ce66d47902957ad26a1b08
-      internalID: 691397993
+      spriteID: 729d29b417a1b4840b348a73828089ef
+      internalID: -631251294
       vertices: []
       indices: 
       edges: []
@@ -136,9 +136,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      2_0: 577270183
-      2_1: 1430691661
-      2_2: 691397993
+      "salsich\xE3o andando costas 2_0": 54013773
+      "salsich\xE3o andando costas 2_1": 465611832
+      "salsich\xE3o andando costas 2_2": -631251294
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

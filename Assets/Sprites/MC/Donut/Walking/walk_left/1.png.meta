@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 634bddbb82311c4469a56b8d40335f5e
+guid: 8e8f5b732be01ba4cb9e3472a3e38e9d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1_0
+      name: donut andando lado 1_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 501
-        width: 928
+        width: 1113
         height: 822
       alignment: 9
-      pivot: {x: 0.3834784, y: 0.2949408}
+      pivot: {x: 0.49157533, y: 0.2889696}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ad4c54c67657ad469b648bb7e7eda06
-      internalID: 1203245349
+      spriteID: 0a1c277e5d30a2142a4fb4151dcd0425
+      internalID: 451216742
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      1_0: 1203245349
+      donut andando lado 1_0: 451216742
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

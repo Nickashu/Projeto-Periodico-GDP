@@ -552,7 +552,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -700,6 +700,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -597366584, guid: b7f9139cf26474c4f971d02d5c8e4098, type: 3}
+    - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.71875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.03125
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
 --- !u!1 &299828392
@@ -1422,6 +1430,7 @@ GameObject:
   - component: {fileID: 956272794}
   - component: {fileID: 956272793}
   - component: {fileID: 956272792}
+  - component: {fileID: 956272795}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1470,8 +1479,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.25792095, g: 0.33962262, b: 0.33147562, a: 1}
+  m_Sprite: {fileID: 35163868, guid: 1bb58e7554893fc42af39c20fa98ea1b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1489,8 +1498,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956272788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.64321804, y: 1.8527461, z: 1}
+  m_LocalPosition: {x: 3.42, y: 0, z: 0}
+  m_LocalScale: {x: 0.16198282, y: 0.16198282, z: 0.32396564}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1059957866}
@@ -1590,19 +1599,40 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.29765892, y: -0.21521676}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5891051, y: 0.2794646}
+    oldSize: {x: 14.50287, y: 12.84375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.933193, y: 7.9760704}
   m_EdgeRadius: 0
+--- !u!95 &956272795
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956272788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 103b16b7f5b74a0449f5d32878d26df4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &998187732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,7 +1816,7 @@ Transform:
   m_GameObject: {fileID: 1059957865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.817337, y: 1.817337, z: 1.817337}
+  m_LocalScale: {x: 21.171173, y: 21.171173, z: 21.171173}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 956272790}
@@ -3354,6 +3384,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 183352370, guid: b7f9139cf26474c4f971d02d5c8e4098, type: 3}
+    - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.640625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820673111816988269, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.625
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
 --- !u!1 &2018654291
@@ -3440,7 +3478,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour {
 
     private Rigidbody2D rb;
+    private Animator anim;
     private Vector2 movementVector;
     private DialogueTrigger triggerDialogue;
     private Trash scriptTrash;
 
-    private float speed = 5f;
+    private float speed = 3.5f;
     private bool isRunning = false;
     private int contInteracoes = 0, limitInteractionsTutorial=5;
 
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour {
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update() {
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour {
         }
         else {
             isRunning = false;
-            speed = 5;
+            speed = 3.5f;
         }
 
         if (!DialogueController.GetInstance().dialogueActive) {    //Se o gato não estiver no meio de um diálogo
@@ -65,6 +67,16 @@ public class Player : MonoBehaviour {
             vectorResult = new Vector2(movementVector.x, movementVector.y).normalized;
 
         rb.velocity = (vectorResult * speed);
+
+        //Animações do gato andando e correndo:
+        if (movementVector.x != 0 || movementVector.y != 0)
+            anim.SetFloat("Speed", 5);
+        else
+            anim.SetFloat("Speed", 0);
+        anim.SetBool("isRunning", isRunning);
+        anim.SetFloat("Horizontal", movementVector.x);
+        anim.SetFloat("Vertical", movementVector.y);
+        Debug.Log("X: " + movementVector.x + "  Y: " + movementVector.y);
     }
 
     //Funções para checar se o player se aproximou o suficiente de um NPC para acionar o diálogo:

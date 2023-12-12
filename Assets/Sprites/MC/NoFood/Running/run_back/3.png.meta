@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6692b5154a29a5a42ab9cc3b33ce37b6
+guid: f31ab11b14aeef0419386cec5a68ed64
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: back_29
+      name: 3_8
       rect:
         serializedVersion: 2
-        x: 619
-        y: 499
-        width: 630
-        height: 828
+        x: 1381
+        y: 427
+        width: 547
+        height: 749
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46da8064a8f74ff4481b3ed4a69d0245
-      internalID: -1511181328
+      spriteID: a4590ffe58fb84243a6cbd7737484073
+      internalID: -434688725
       vertices: []
       indices: 
       edges: []
@@ -136,37 +136,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      back_0: 1884931727
-      back_1: -171304008
-      back_10: 349892096
-      back_11: -1471122698
-      back_12: 500332904
-      back_13: -160073316
-      back_14: 896875960
-      back_15: 2124675153
-      back_16: 919662408
-      back_17: -327329655
-      back_18: 1038848301
-      back_19: 1840558151
-      back_2: -1238610930
-      back_20: 552066170
-      back_21: 1098511001
-      back_22: -163975384
-      back_23: -1902134405
-      back_24: -440827335
-      back_25: 1989403268
-      back_26: -997397866
-      back_27: 907384752
-      back_28: -788777567
-      back_29: -1511181328
-      back_3: 1241247087
-      back_30: -257009686
-      back_4: -1360921862
-      back_5: -1579105830
-      back_6: -1080400819
-      back_7: 2051925135
-      back_8: -208944090
-      back_9: 1684261405
+      3_0: -2122213745
+      3_1: 380207959
+      3_10: 1950295613
+      3_11: 447326731
+      3_12: 290609342
+      3_13: -1335278072
+      3_14: -205419280
+      3_15: 1625105839
+      3_2: 240630546
+      3_3: -113013
+      3_4: 1735334564
+      3_5: -520784529
+      3_6: -2028144209
+      3_7: -1982184514
+      3_8: -434688725
+      3_9: -1803713264
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

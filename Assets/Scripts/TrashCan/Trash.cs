@@ -6,9 +6,10 @@ public class Trash : MonoBehaviour {
 
     [SerializeField]
     private GameObject food;
-
     [SerializeField]
     private SearchBar searchBar;
+    [SerializeField]
+    private int idFood=1;    //Este campo definirá qual comida estrá na lixeira
 
     private void Start() {
         anim = GetComponent<Animator>();
@@ -30,6 +31,8 @@ public class Trash : MonoBehaviour {
         if(anim != null)   //Se não for a lixeira de palhaço (que não tem animação ao ser aberta)
             anim.SetBool("open", true);
         gameObject.tag = "TrashOpened";
+        food.GetComponent<Food>().tagFood = GameController.dicIdFood[this.idFood];    //Adicionando a tag específica na comida
+        food.GetComponent<Food>().idFood = this.idFood;    //Adicionando o id específico na comida
         food.SetActive(true);
     }
 }

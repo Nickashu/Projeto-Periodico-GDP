@@ -5,9 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
-  - Item
   - TrashOpened
   - TrashClosed
+  - Donut
+  - Espeto
+  - Pipoca
+  - Racao
+  - Salsichao
+  - Sorvete
+  - ComidaBoca
   layers:
   - Default
   - TransparentFX

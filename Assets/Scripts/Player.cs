@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
 
@@ -10,12 +9,12 @@ public class Player : MonoBehaviour {
     private Vector2 movementVector;
     private DialogueTrigger triggerDialogue;
     private Trash scriptTrash;
-    private GameObject food;
+    private GameObject food, NPCDialogue=null;
 
-    private int idFood=0;
+    public int idFood = 0;
     private float speed = 3.5f;
     private bool isRunning = false, isMoving=false, hasFood=false;
-    private int contInteracoes = 0, limitInteractionsTutorial=5;
+    private int contInteracoes = 0, limitInteractionsTutorial=5, qntFood = 0;    //qntFood representa quantas comidas pegamos durante o jogo
 
     public TextMeshProUGUI txtTutorialInteractions;
 
@@ -38,11 +37,19 @@ public class Player : MonoBehaviour {
 
         if (!DialogueController.GetInstance().dialogueActive) {    //Se o gato não estiver no meio de um diálogo
             if (Input.GetKeyDown(KeyCode.Z)) {
-                if (triggerDialogue != null) {
+                if (NPCDialogue != null && triggerDialogue != null) {
                     if (contInteracoes <= limitInteractionsTutorial) {
                         contInteracoes++;
                         txtTutorialInteractions.gameObject.SetActive(false);
                     }
+
+                    //Detectando se eu estou falando com o corvo pela segunda vez e tenho comida (neste caso, minha comida desaparece pois estou dando ela ao corvo):
+                    if(idFood != 0 && NPCDialogue.GetComponent<Crow>() != null) {    //Se o NPC que eu estou falando é o corvo e eu tenho comida
+                        if (NPCDialogue.GetComponent<Crow>().crowVersion == 1 && ((Ink.Runtime.BoolValue)DialogueController.GetInstance().GetVariableState("falouCorvo1")).value == true)    //Se for a primeira versão do corvo e se eu já tiver falado com ele uma vez
+                            dropFood(true);
+                    }
+
+                    //Acionando o diálogo:
                     triggerDialogue.TriggerDialogue();
                 }
             }
@@ -57,9 +64,8 @@ public class Player : MonoBehaviour {
                     scriptTrash.stopSearchingFood();
             }
 
-            if (Input.GetKeyUp(KeyCode.Space) && !isMoving) {    //Barra de espaço será usada para dropar a comida atual (somente quando estivermos parados)
-                dropFood();
-            }
+            if (Input.GetKeyUp(KeyCode.Space) && !isMoving)    //Barra de espaço será usada para dropar a comida atual (somente quando estivermos parados)
+                dropFood(false);
         }
 
     }
@@ -92,53 +98,62 @@ public class Player : MonoBehaviour {
 
     //Funções para checar se o player se aproximou o suficiente de um NPC para acionar o diálogo:
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (GameController.tagsInteractable.Contains(collision.tag)) {
-            Debug.Log("Entrou na hitbox de interação");
-            if (contInteracoes <= limitInteractionsTutorial)
-                txtTutorialInteractions.gameObject.SetActive(true);
-        }
-
-        if(collision.tag == "NPC")    //Aqui será detectado quando a hitbox de interação do player enconstar no NPC
-            triggerDialogue = collision.gameObject.GetComponent<DialogueTrigger>();
-
-        if (collision.tag == "TrashClosed")    //Aqui será detectado quando a hitbox de interação do player encostar em uma lixeira
-            scriptTrash = collision.gameObject.GetComponent<Trash>();
-
-        if (GameController.tagsFoods.Contains(collision.tag)) {    //Aqui será detectado quando o player tocar na comida, já que foi configurado para que não haja detecção entre colisão do hitbox de diálogo com comidas
-            if (collision.gameObject.name == "comidaCorvo")
-                DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComidaCorvo");
-
-            if (!hasFood) {
-                changeAnimationFood(collision.gameObject, false);
-                hasFood = true;
-                GameObject objFood = collision.gameObject;
-                objFood.SetActive(false);
-                objFood.GetComponent<Food>().tag = "ComidaBoca";   //Esta será a tag temporária do objeto. Ao ser dropada, a comida ativará sua animação e voltará a ter sua tag original
-                objFood.GetComponent<Food>().isLixo = false;
-                this.food = objFood;
-                this.idFood = objFood.GetComponent<Food>().idFood;
+        if (!DialogueController.GetInstance().dialogueActive) {
+            if (GameController.tagsInteractable.Contains(collision.tag)) {
+                Debug.Log("Entrou na hitbox de interação");
+                if (contInteracoes <= limitInteractionsTutorial)
+                    txtTutorialInteractions.gameObject.SetActive(true);
             }
-            Debug.Log("Tocou comida!!");
+
+            if (collision.tag == "NPC") {    //Aqui será detectado quando a hitbox de interação do player enconstar no NPC
+                triggerDialogue = collision.gameObject.GetComponent<DialogueTrigger>();
+                NPCDialogue = collision.gameObject;
+            }
+
+            if (collision.tag == "TrashClosed")    //Aqui será detectado quando a hitbox de interação do player encostar em uma lixeira
+                scriptTrash = collision.gameObject.GetComponent<Trash>();
+
+            if (GameController.tagsFoods.Contains(collision.tag)) {    //Aqui será detectado quando o player tocar na comida, já que foi configurado para que não haja detecção entre colisão do hitbox de diálogo com comidas
+                if (qntFood == 0)
+                    DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComidaCorvo");   //Ativando o trigger de diálogo ao dar a comida para o corvo
+
+                if (!hasFood) {
+                    changeAnimationFood(collision.gameObject, false);
+                    hasFood = true;
+                    qntFood++;
+                    GameObject objFood = collision.gameObject;
+                    objFood.SetActive(false);
+                    objFood.GetComponent<Food>().tag = "ComidaBoca";   //Esta será a tag temporária do objeto. Ao ser dropada, a comida ativará sua animação e voltará a ter sua tag original
+                    objFood.GetComponent<Food>().isLixo = false;
+                    this.food = objFood;
+                    this.idFood = objFood.GetComponent<Food>().idFood;
+                }
+                Debug.Log("Tocou comida!!");
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-        if (GameController.tagsInteractable.Contains(collision.tag)) {
-            if (contInteracoes <= limitInteractionsTutorial)
-                txtTutorialInteractions.gameObject.SetActive(false);
-            Debug.Log("Saiu da hitbox de interação");
-        }
-        if (collision.tag == "NPC")
-            triggerDialogue = null;
-        if (collision.tag == "TrashClosed") {
-            scriptTrash.stopSearchingFood();
-            scriptTrash = null;
+        if (!DialogueController.GetInstance().dialogueActive) {
+            if (GameController.tagsInteractable.Contains(collision.tag)) {
+                if (contInteracoes <= limitInteractionsTutorial)
+                    txtTutorialInteractions.gameObject.SetActive(false);
+                Debug.Log("Saiu da hitbox de interação");
+            }
+            if (collision.tag == "NPC") {
+                triggerDialogue = null;
+                NPCDialogue = null;
+            }
+            if (collision.tag == "TrashClosed") {
+                scriptTrash.stopSearchingFood();
+                scriptTrash = null;
+            }
         }
     }
 
 
     
-    private void dropFood() {           //TENHO QUE VOLTAR AQUI DEPOIS (NÃO ESTÁ FINALIZADO)
+    private void dropFood(bool disappear) {           //TENHO QUE VOLTAR AQUI DEPOIS (NÃO ESTÁ FINALIZADO)
         if (this.food != null) {
             //Debug.Log("Tem comida!");
             changeAnimationFood(null, true);    //Chamando de volta a animação sem comida

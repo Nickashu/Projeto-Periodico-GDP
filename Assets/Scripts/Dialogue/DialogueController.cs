@@ -157,4 +157,14 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
         if (characterName != "")
             txtNameCharacter.text = characterName;
     }
+
+    public Ink.Runtime.Object GetVariableState(string variableName) {    //Esta função servirá para recuperar o estado de determinada variável de diálogo
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariablesController.variablesValues.TryGetValue(variableName, out variableValue);
+        if (variableValue == null) {
+            Debug.Log("Não foi possível recuperar o valor da variável de diálogo informada.");
+            return null;
+        }
+        return variableValue;
+    }
 }

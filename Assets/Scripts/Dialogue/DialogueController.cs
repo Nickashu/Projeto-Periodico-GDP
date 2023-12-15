@@ -107,11 +107,12 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
         endLine = true;
     }
 
-    private void EndDialogue() {
+    private void EndDialogue() {   //Método chamado ao fim do diálogo
         txtDialogue.text = "";
         DialogueBoxContainer.SetActive(false);
         dialogueActive = false;
         dialogueVariablesController.StopListening(dialogue);  //Para parar de detectar as mudanças de variáveis no diálogo
+        GameController.checkVariablesDialogue(dialogueVariablesController.variablesValues);    //Fazendo as checagens de variáveis importantes que podem ter mudado após um diálogo
     }
 
 

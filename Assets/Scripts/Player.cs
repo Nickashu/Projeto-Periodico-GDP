@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
     public int idFood = 0;
     private float speed = 3.5f;
     private bool isRunning = false, isMoving=false, hasFood=false;
-    private int contInteracoes = 0, limitInteractionsTutorial=5, qntFood = 0;    //qntFood representa quantas comidas pegamos durante o jogo
+    private int contInteracoes = 0, limitInteractionsTutorial=1, qntFood = 0;    //qntFood representa quantas comidas pegamos durante o jogo
 
     public TextMeshProUGUI txtTutorialInteractions;
 
@@ -153,7 +153,7 @@ public class Player : MonoBehaviour {
 
 
     
-    private void dropFood(bool disappear) {           //TENHO QUE VOLTAR AQUI DEPOIS (NÃO ESTÁ FINALIZADO)
+    private void dropFood(bool disappear) {           //TENHO QUE VOLTAR AQUI DEPOIS (NÃO ESTÁ FINALIZADO)   o parâmetro disappear define se a comida vai desaparecer ou vai ficar no chão
         if (this.food != null) {
             //Debug.Log("Tem comida!");
             changeAnimationFood(null, true);    //Chamando de volta a animação sem comida

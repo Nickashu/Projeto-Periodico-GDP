@@ -1,5 +1,5 @@
 VAR falouCorvo1 = false
-VAR terminouDeFalarCorvo = false
+VAR terminouDeFalarCorvo1 = false
 VAR temComidaCorvo = false
 
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6434110199832129965}
   - component: {fileID: 7855648942362669328}
   - component: {fileID: 2061968650234881271}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bilheteria_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

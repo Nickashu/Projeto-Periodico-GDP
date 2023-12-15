@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6820673111648937401}
   - component: {fileID: 6820673111648937400}
   - component: {fileID: 6820673111648937404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lixeira_padrao
   m_TagString: TrashClosed
   m_Icon: {fileID: 0}

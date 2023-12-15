@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 919010421529196807}
   - component: {fileID: 6017813329251097563}
   - component: {fileID: 6740897089591740807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: caixa_elet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

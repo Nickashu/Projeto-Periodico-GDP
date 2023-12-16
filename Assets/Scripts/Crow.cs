@@ -61,6 +61,7 @@ public class Crow : MonoBehaviour {
     }
     private void endFlyAnimation() {     //Evento ao acabar a animação do corvo voando
         Destroy(transform.gameObject);
+        GameController.acabouTutorial = true;
         wallBlocking.SetActive(false);    //Desbloqueando a entrada para o jogador
     }
 }

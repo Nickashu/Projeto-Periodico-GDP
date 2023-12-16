@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -14,13 +15,16 @@ public class Player : MonoBehaviour {
     public int idFood = 0;
     private float speed = 3.5f;
     private bool isRunning = false, isMoving=false, hasFood=false;
-    private int contInteracoes = 0, limitInteractionsTutorial=1, qntFood = 0;    //qntFood representa quantas comidas pegamos durante o jogo
+    private int contInteracoes = 0, limitInteractionsTutorial=1, qntFood = 0, lives;    //qntFood representa quantas comidas pegamos durante o jogo
 
-    public TextMeshProUGUI txtTutorialInteractions;
+    public TextMeshProUGUI txtTutorialInteractions, txtVidas;
+    public GameObject transitionAfterCaught;   //Esta será a tela de transição que aparecerá depois que o gato for pego
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        lives = 2;
+        updateCanvasVida();
     }
 
     void Update() {
@@ -35,7 +39,7 @@ public class Player : MonoBehaviour {
             speed = 3.5f;
         }
 
-        if (!DialogueController.GetInstance().dialogueActive) {    //Se o gato não estiver no meio de um diálogo
+        if (!DialogueController.GetInstance().dialogueActive && !GameController.gamePaused) {    //Se o gato não estiver no meio de um diálogo
             if (Input.GetKeyDown(KeyCode.Z)) {
                 if (NPCDialogue != null && triggerDialogue != null) {
                     if (contInteracoes <= limitInteractionsTutorial) {
@@ -76,24 +80,28 @@ public class Player : MonoBehaviour {
 
     private void FixedUpdate() {
         Vector2 vectorResult = new Vector2(0, 0);
-        if (!DialogueController.GetInstance().dialogueActive)    //Se não estiver no meio de um diálogo
+        if (!DialogueController.GetInstance().dialogueActive && !GameController.gamePaused) {    //Se não estiver no meio de um diálogo
             vectorResult = new Vector2(movementVector.x, movementVector.y).normalized;
 
-        rb.velocity = (vectorResult * speed);
+            rb.velocity = (vectorResult * speed);
 
-        //Animações do gato andando e correndo:
-        if (movementVector.x != 0 || movementVector.y != 0) {
-            this.isMoving = true;   //Siginifica que o gato está se movendo
-            anim.SetFloat("Speed", 5);
+            //Animações do gato andando e correndo:
+            if (movementVector.x != 0 || movementVector.y != 0) {
+                this.isMoving = true;   //Siginifica que o gato está se movendo
+                anim.SetFloat("Speed", 5);
+            }
+            else {
+                this.isMoving = false;
+                anim.SetFloat("Speed", 0);
+            }
+            anim.SetBool("isRunning", isRunning);
+            anim.SetFloat("Horizontal", movementVector.x);
+            anim.SetFloat("Vertical", movementVector.y);
         }
         else {
-            this.isMoving = false;
             anim.SetFloat("Speed", 0);
+            rb.velocity = Vector2.zero;
         }
-        anim.SetBool("isRunning", isRunning);
-        anim.SetFloat("Horizontal", movementVector.x);
-        anim.SetFloat("Vertical", movementVector.y);
-        //Debug.Log("X: " + movementVector.x + "  Y: " + movementVector.y);
     }
 
     //Funções para checar se o player se aproximou o suficiente de um NPC para acionar o diálogo:
@@ -152,7 +160,6 @@ public class Player : MonoBehaviour {
     }
 
 
-    
     private void dropFood(bool disappear) {           //TENHO QUE VOLTAR AQUI DEPOIS (NÃO ESTÁ FINALIZADO)   o parâmetro disappear define se a comida vai desaparecer ou vai ficar no chão
         if (this.food != null) {
             //Debug.Log("Tem comida!");
@@ -176,9 +183,6 @@ public class Player : MonoBehaviour {
             Debug.Log("Não tem comida!");
     }
     
-
-
-
     private void changeAnimationFood(GameObject objFood, bool drop) {   //Se drop for true, quer dizer que o jogador está tentando dropar a comida atual
         if(drop) {   //Entra aqui se estiver dropando a comida
             Debug.Log("Dropou a comida!");
@@ -190,5 +194,24 @@ public class Player : MonoBehaviour {
                 anim.SetInteger("food", idFood);
             }
         }
+    }
+
+    public void looseLife() {    //Esta função será chamada pelo script do guarda quando o gato for pego
+        lives--;
+        updateCanvasVida();
+        transitionAfterCaught.SetActive(false);
+        transitionAfterCaught.SetActive(true);
+        if(lives == 0)
+            Debug.Log("Morreu!");
+    }
+
+    public void returnToInitialPosition() {
+        Vector3 newPosition = new Vector3(GameController.comecoMapaX, GameController.comecoMapaY);
+        transform.position = newPosition;
+    }
+
+
+    private void updateCanvasVida() {
+        txtVidas.text = lives.ToString();
     }
 }

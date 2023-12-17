@@ -39,13 +39,27 @@ public class DialogueVariablesController {
     }
 
 
-    public void ChangeSpecificVariable(string nameInkFunction) {    //Este método será chamado se eu quiser alterar uma variável específica após uma certa ação durante o jogo
+    public void ChangeSpecificVariable(string nameInkFunction, object argument=null) {    //Este método será chamado se eu quiser alterar uma variável específica após uma certa ação durante o jogo
         StartListening(dialogueOfVariables);
-        dialogueOfVariables.ChoosePathString(nameInkFunction);
-        while (dialogueOfVariables.canContinue)
-            dialogueOfVariables.Continue();
-        StopListening(dialogueOfVariables);
+        //dialogueOfVariables.ChoosePathString(nameInkFunction);
+        //while (dialogueOfVariables.canContinue)
+        //    dialogueOfVariables.Continue();
 
+        //Sei que argument só será bool ou int:
+        bool boolValue = false;
+        int intValue = 0;
+        if(argument is bool)
+            boolValue = (bool)argument;
+        else if(argument is int)
+            intValue = (int)argument;
+        if(argument != null)
+            dialogueOfVariables.EvaluateFunction(nameInkFunction, argument);
+        else
+            dialogueOfVariables.EvaluateFunction(nameInkFunction);
+        StopListening(dialogueOfVariables);
+    }
+
+    public void CheckVariableValues() {    //Este método será usado para debug
         foreach (KeyValuePair<string, Ink.Runtime.Object> variable in variablesValues) {
             Debug.Log("Variável: " + variable.Key + "   Valor: " + variable.Value);
         }

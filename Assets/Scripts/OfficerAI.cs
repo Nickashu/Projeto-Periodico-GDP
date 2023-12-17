@@ -52,7 +52,7 @@ public class OfficerAI : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (!GameController.gamePaused) {
+        if (!GameController.gameIsPaused()) {
             if (!playerCaught) {
                 if (path != null) {   //Se existir um caminho calculado
                     if (currentWaypoint >= path.vectorPath.Count) {   //Se chegamos ao fim do caminho

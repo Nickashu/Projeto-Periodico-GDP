@@ -24,7 +24,7 @@ Basta! Tão eterna quanto a Noite Eterna, é a minha fome. Traga-me uma das del�
 Cuá. Agora sim! Devidamente alimentado.   #character: corvo  #state: corvo_normal
 Então, o que você estava falando sobre a Noite Eterna? #character: gato  #state: gato_normal
 Ah! A terrível escuridão que um dia abraça a todos nós. Para sempre. Temo que seu amigo tenha completado a travessia. Mas, se tiver sorte, ele pode ainda vagar por aí. Quem sabe.   #character: corvo  #state: corvo_normal
-Você quer dizer… que ele está morto? #character: gato  #state: gato_normal
+Você quer dizer… que ele está morto? #character: gato  #state: gato_triste
 Depende do que consideras morto. Ah, não desanimes. Pode ser que seu amigo ainda esteja nesse plano. Há uma chance, mas eu não iria atrás dele se fosse você. Aproveite sua liberdade e saia o quanto antes desse terrível lugar.   #character: corvo  #state: corvo_normal
 Quero encontrar meu amigo. Onde você o viu?   #character: gato  #state: gato_normal
 Hmmm ou és ousado ou completamente louco. O caminho que tu procuras é para lá, após a grande gaiola branca e vermelha. Não digas que eu não te avisei. Cuá. Cuá. #character: corvo  #state: corvo_normal

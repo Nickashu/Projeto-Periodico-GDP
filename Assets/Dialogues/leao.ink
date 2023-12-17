@@ -6,7 +6,7 @@ INCLUDE Variaveis.ink
 === main ===
 Amigo. Você está vivo!.   #character: gato  #state: gato_feliz
 Grr. Quem está ai? Veio se juntar ao banquete? Isso seria ótimo. Tenho muita, muita fome.  #character: leao  #state: leao_normal
-Miau. Amigo? Que bom te ver mais uma vez. Mas acho que é o meu fim. Fuja enquanto há chance. #character: amigo  #state: amigo_normal
+Miau. Amigo? Que bom te ver mais uma vez. Mas acho que é o meu fim. Fuja enquanto há chance. #character: amigo  #state: amigo_assustado
 Nunca! Eu vim te salvar e não vou embora sem você.   #character: gato  #state: gato_normal
 Quanta coragem para um gatinho. Como exatamente você vai fazer isso? Grr. #character: leao  #state: leao_normal
 Um acordo. Eu te trago bastante comida e você liberta o meu amigo.   #character: gato  #state: gato_normal
@@ -32,8 +32,6 @@ Vejamos o que temos aqui... #character: leao  #state: leao_normal
 - 5: Grr. Me pergunto que bicho teria sido esse. Eu comeria vários. #character: leao  #state: leao_normal  //Buff: Gato detecta mais carnes?
 - else: Grr. Isso é muito bom. Mais, por favor. #character: leao  #state: leao_normal  //Buff: gato ganha mais tempo no timer?
 }
-
-
 
 {numComidasLeao:
 - 3: 

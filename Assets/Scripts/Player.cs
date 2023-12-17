@@ -54,8 +54,10 @@ public class Player : MonoBehaviour {
                                 dropFood(true);
                         }
                         else if (NPCDialogue.layer == LayerMask.NameToLayer("Leao")) {    //Se o NPC que eu estou falando é o leão e eu tenho comida
-                            if (((Ink.Runtime.BoolValue)DialogueController.GetInstance().GetVariableState("falouLeao1")).value == true)
+                            if (((Ink.Runtime.BoolValue)DialogueController.GetInstance().GetVariableState("falouLeao1")).value == true) {
+                                GameController.idComidaLeao = this.idFood;
                                 dropFood(true);
+                            }
                         }
                     }
 

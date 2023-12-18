@@ -8,7 +8,7 @@ public class OfficerAI : MonoBehaviour {
     public Transform transformPlayer;
     private Player scriptPlayer;
     public List<Transform> patrolPoints;    //Estas serão as posições que o guarda passa ao patrulhar o cenário
-    private float speedChasing = 400f, speedPatrolling = 500f, speed;
+    private float speedChasing = 400f, speedPatrolling = 300f, speed;
     public float maxDownGridY, maxRightGridX;   //Estas variáveis armazenam o até onde a área de grid do A* se extende para baixo e para a direita 
 
     //Estas variáveis são usadas para movimentar o guarda pelo grid:
@@ -35,7 +35,7 @@ public class OfficerAI : MonoBehaviour {
     private void Update() {
         float playerDistance = Vector2.Distance(rb.position, transformPlayer.position);
         //Debug.Log("Distância do jogador: " + playerDistance);
-        if(playerDistance <= 20f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
+        if(playerDistance <= 15f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
             if (!isChasing)
                 target = transformPlayer;
             isChasing = true;

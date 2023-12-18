@@ -24,13 +24,13 @@ Os meus termos são esses: Ou você me traz comida boa e rápido ou eu devoro o 
 Vejamos o que temos aqui... #character: leao  #state: leao_normal
 {comidaLeao:
 //Doces:
-- 1: GRRRR!! Só isso? Você já viu o meu tamanho? #character: leao  #state: leao_normal  //Penalidade: - x segundos no timer?
-- 2: GRRRR!! Eu sou carnívoro. Eu quero carne! O seu amigo parece apetitoso. #character: leao  #state: leao_normal  //Penalidade: - Penalidade: Gato recebe um slow?
-- 3: GRRRR!! Você está brincando comigo? Minha paciência tem limites. #character: leao  #state: leao_normal  //Penalidade: - Penalidade: reduzir a barra invés de aumentar?
+- 1: GRRRR!! Só isso? Você já viu o meu tamanho? #character: leao  #state: leao_raiva  //Penalidade: - x segundos no timer?
+- 2: GRRRR!! Eu sou carnívoro. Eu quero carne! O seu amigo parece apetitoso. #character: leao  #state: leao_raiva  //Penalidade: - Penalidade: Gato recebe um slow?
+- 3: GRRRR!! Você está brincando comigo? Minha paciência tem limites. #character: leao  #state: leao_raiva  //Penalidade: - Penalidade: reduzir a barra invés de aumentar?
 //Carnes:
-- 4: Grr. Carne assada e temperada é ainda melhor que esses gatos crus. Espera… Gatos… temperados? Mmmm. Eu devia ter pedido isso no acordo. #character: leao  #state: leao_normal  //Buff: Gato anda mais rápido?
-- 5: Grr. Me pergunto que bicho teria sido esse. Eu comeria vários. #character: leao  #state: leao_normal  //Buff: Gato detecta mais carnes?
-- else: Grr. Isso é muito bom. Mais, por favor. #character: leao  #state: leao_normal  //Buff: gato ganha mais tempo no timer?
+- 4: Grr. Carne assada e temperada é ainda melhor que esses gatos crus. Espera… Gatos… temperados? Mmmm. Eu devia ter pedido isso no acordo. #character: leao  #state: leao_tranquilo  //Buff: Gato anda mais rápido?
+- 5: Grr. Me pergunto que bicho teria sido esse. Eu comeria vários. #character: leao  #state: leao_tranquilo  //Buff: Gato detecta mais carnes?
+- else: Grr. Isso é muito bom. Mais, por favor. #character: leao  #state: leao_tranquilo  //Buff: gato ganha mais tempo no timer?
 }
 
 {numComidasLeao:

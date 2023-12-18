@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
     public static List<string> tagsInteractable = new List<string>() { "NPC" };    //Esta lista armazena todas as tags de objetos possíveis de se intergair no jogo
     public static List<string> tagsFoods = new List<string>() { "Donut", "Espeto", "Pipoca", "Racao", "Salsichao", "Sorvete" };    //Esta lista armazena todas as tags de comida
     public static Dictionary<int, string> dicIdFood = new Dictionary<int, string> { { 1, "Donut" }, { 2, "Espeto" }, { 3, "Pipoca" }, { 4, "Racao" }, { 5, "Salsichao" }, { 6, "Sorvete" } };
-    public static Dictionary<int, int> dicIdFoodPoints = new Dictionary<int, int> { { 1, -5 }, { 2, 20 }, { 3, 1 }, { 4, 10 }, { 5, 15 }, { 6, -1 } };
+    public static Dictionary<int, int> dicIdFoodPoints = new Dictionary<int, int> { { 1, -5 }, { 2, 20 }, { 3, 1 }, { 4, 5 }, { 5, 15 }, { 6, -1 } };
     //Criando uma lista para identificar os ids das comidas que não são carne:
     public static List<int> idsNotMeat = new List<int>() { 1, 3, 4, 6 };
 
@@ -59,13 +59,11 @@ public class GameController : MonoBehaviour {
             beginTimer = true;
         }
 
-        if (beginTimer && !gameIsPaused()) {
+        if (beginTimer && !gameIsPaused())
             updateTimer();   //Atualizando o timer
-        }
 
-        if (changingLionBar) {
+        if (changingLionBar)
             canvasLionBar.GetComponent<Lion_Bar>().changeBar(dicIdFoodPoints[idComidaLeao]);   //Fazendo a barra de comida do leão variar
-        }
 
         if (Input.GetKeyDown(KeyCode.Escape))   //Apertar esc para sair do jogo
             Application.Quit();

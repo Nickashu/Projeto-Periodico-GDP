@@ -7492,14 +7492,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 2024782654}
     m_Modifications:
     - target: {fileID: 6265658308193475208, guid: 1c3ab18bc4f518a43a724b3dc7120958, type: 3}
-      propertyPath: speedChasing
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6265658308193475208, guid: 1c3ab18bc4f518a43a724b3dc7120958, type: 3}
-      propertyPath: speedPatrolling
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6265658308193475208, guid: 1c3ab18bc4f518a43a724b3dc7120958, type: 3}
       propertyPath: transformPlayer
       value: 
       objectReference: {fileID: 956272790}

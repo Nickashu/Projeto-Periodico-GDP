@@ -49,8 +49,8 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
-            if (dialogueActive)
+        if (dialogueActive) {
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
                 PassDialogue();
         }
         if (endLine) {

@@ -44,55 +44,57 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
+    - {fileID: 2800000, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 1398964255, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -295646372, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -1247787694, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -1714281570, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -2072907631, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -668152872, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -1208424624, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 1594710941, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -1933290767, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 1520551391, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 389532117, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -2108496866, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 2074875739, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 994880641, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -71336127, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 1031161422, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 1087330539, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: -1738485489, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 786626711, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 241863020, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
-  - {fileID: 838743345, guid: 707306b0ee48d6641869556e82bb4c60, type: 3}
+  - {fileID: -1056756966, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: 1334943660, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -697933406, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: 1058430833, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: 624779543, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: 21767368, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -2029698114, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1399325215, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1675613295, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -245025777, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: 1129492926, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1466533857, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -524555286, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -344478799, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1297516953, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1021471644, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: 1422431632, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1197697666, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -760402710, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1332951360, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: 680757490, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
+  - {fileID: -1045604956, guid: eec6c0e9b359f964ca5b9f01751b7e1e, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Tile_20
-  - Tile_2
-  - Tile_3
-  - Tile_0
-  - Tile_1
-  - Tile_6
-  - Tile_7
-  - Tile_4
-  - Tile_5
-  - Tile_8
-  - Tile_9
-  - Tile_19
-  - Tile_18
-  - Tile_11
-  - Tile_10
-  - Tile_13
-  - Tile_12
-  - Tile_15
-  - Tile_14
-  - Tile_17
-  - Tile_16
+  - tiles_cenario2_9
+  - tiles_cenario2_8
+  - tiles_cenario2_3
+  - tiles_cenario2_2
+  - tiles_cenario2_1
+  - tiles_cenario2_0
+  - tiles_cenario2_7
+  - tiles_cenario2_6
+  - tiles_cenario2_5
+  - tiles_cenario2_4
+  - tiles_cenario2_18
+  - tiles_cenario2_21
+  - tiles_cenario2_19
+  - tiles_cenario2_20
+  - tiles_cenario2_16
+  - tiles_cenario2_17
+  - tiles_cenario2_14
+  - tiles_cenario2_15
+  - tiles_cenario2_12
+  - tiles_cenario2_13
+  - tiles_cenario2_10
+  - tiles_cenario2_11
   m_RenderDataMap: {}
   m_Tag: sprite_atlas
   m_IsVariant: 0

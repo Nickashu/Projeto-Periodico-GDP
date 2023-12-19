@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
 
     public static bool terminouDeFalarCorvo1 = false, falouLeao1=false;    //Aqui ficarão algumas variáveis de diálogo que terão efeitos no jogo
     public static bool acabouTutorial = false, gamePaused = false, changingLionBar = false, playerCaught = false;
-    public static float comecoMapaX=13, comecoMapaY=-20;
+    public static float comecoMapaX=0, comecoMapaY=0;
     public static int idComidaLeao = 0;
 
     private bool beginTimer = false;

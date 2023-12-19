@@ -166,6 +166,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  speedChasing: 11000
+  speedPatrolling: 8000
   maxDownGridY: 42
   maxRightGridX: 64
 --- !u!50 &6265658308193475214
@@ -180,8 +182,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
+  m_Mass: 5
+  m_LinearDrag: 6
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}

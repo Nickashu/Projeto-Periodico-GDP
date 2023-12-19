@@ -8,13 +8,17 @@ public class OfficerAI : MonoBehaviour {
     public Transform transformPlayer;
     private Player scriptPlayer;
     public List<Transform> patrolPoints;    //Estas serão as posições que o guarda passa ao patrulhar o cenário
-    private float speedChasing = 400f, speedPatrolling = 300f, speed;
+
+    [SerializeField]
+    private float speedChasing = 500f;
+    [SerializeField]
+    private float  speedPatrolling = 300f;
     public float maxDownGridY, maxRightGridX;   //Estas variáveis armazenam o até onde a área de grid do A* se extende para baixo e para a direita 
 
     //Estas variáveis são usadas para movimentar o guarda pelo grid:
-    private float nextWaypointDistance = 3f;
+    private float nextWaypointDistance = 1f, speed;
     private int currentWaypoint=0, patrolPointId;
-    private bool isChasing = false, going, flagMovement = false, playerCaught = false;
+    private bool isChasing = false, going, flagMovement = false;
 
     private Path path;
     private Seeker seekerScript;
@@ -36,7 +40,7 @@ public class OfficerAI : MonoBehaviour {
         float playerDistance = Vector2.Distance(rb.position, transformPlayer.position);
         //Debug.Log("Distância do jogador: " + playerDistance);
         if(playerDistance <= 15f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
-            if (!isChasing)
+            if(!isChasing)
                 target = transformPlayer;
             isChasing = true;
             speed = speedChasing;
@@ -53,8 +57,10 @@ public class OfficerAI : MonoBehaviour {
 
     private void FixedUpdate() {
         if (!GameController.gameIsPaused()) {
-            if (!playerCaught) {
+            if (!GameController.playerCaught) {
                 if (path != null) {   //Se existir um caminho calculado
+                    Vector2 movementDirection=new Vector2();
+                    Vector2 movementForce=new Vector2();
                     if (currentWaypoint >= path.vectorPath.Count) {   //Se chegamos ao fim do caminho
                         if (!isChasing && !flagMovement) {   //Se não está perseguido o jogador, vou atualizar o ponto de patrulha
                             flagMovement = true;
@@ -72,9 +78,12 @@ public class OfficerAI : MonoBehaviour {
                     }
                     else {    //Se não chegamos ao fim do caminho, vamos mover o guarda para seu alvo
                         flagMovement = false;
-                        Vector2 movementDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-                        Vector2 movementForce = movementDirection * speed * Time.deltaTime;
-                        rb.AddForce(movementForce);    //Fazendo o guarda se mover através do RigidBody2D
+                        movementDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+                        movementForce = movementDirection * speed * Time.deltaTime;
+                        //Fazendo o guarda se mover através do RigidBody2D:
+                        //rb.MovePosition(rb.position + movementForce);
+                        //rb.velocity = movementForce;
+                        rb.AddForce(movementForce);
 
                         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
                         if (distance < nextWaypointDistance)
@@ -117,12 +126,13 @@ public class OfficerAI : MonoBehaviour {
         yield return new WaitForSeconds(2.0f);
         StopAllCoroutines();
         Debug.Log("Capturou!");
-        playerCaught = false;
         scriptPlayer.looseLife();   //Fazendo o jogador perder uma vida e voltar ao início do mapa
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag.Equals("Player"))
-            playerCaught = true;
+    private void OnCollisionStay2D(Collision2D collision) {
+        if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught) {
+            Debug.Log("Tá tocando!!!");
+            GameController.playerCaught = true;
+        }
     }
 }

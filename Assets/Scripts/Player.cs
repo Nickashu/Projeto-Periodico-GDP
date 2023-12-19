@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
 
     public int idFood = 0;
     private float speed = 3.5f;
-    private bool isRunning = false, isMoving=false, hasFood=false;
+    private bool isRunning = false, hasFood=false;
     private int contInteracoes = 0, limitInteractionsTutorial=1, lives;    //qntFood representa quantas comidas pegamos durante o jogo
 
     public TextMeshProUGUI txtTutorialInteractions, txtVidas;
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour {
                     scriptTrash.stopSearchingFood();
             }
 
-            if (Input.GetKeyUp(KeyCode.Space) && !isMoving)    //Barra de espaço será usada para dropar a comida atual (somente quando estivermos parados)
+            if (Input.GetKeyUp(KeyCode.Space))    //Barra de espaço será usada para dropar a comida atual
                 dropFood(false);
 
             //Debug:
@@ -98,14 +98,10 @@ public class Player : MonoBehaviour {
             rb.velocity = (vectorResult * speed);
 
             //Animações do gato andando e correndo:
-            if (movementVector.x != 0 || movementVector.y != 0) {
-                this.isMoving = true;   //Siginifica que o gato está se movendo
+            if (movementVector.x != 0 || movementVector.y != 0) 
                 anim.SetFloat("Speed", 5);
-            }
-            else {
-                this.isMoving = false;
+            else 
                 anim.SetFloat("Speed", 0);
-            }
             anim.SetBool("isRunning", isRunning);
             anim.SetFloat("Horizontal", movementVector.x);
             anim.SetFloat("Vertical", movementVector.y);
@@ -134,15 +130,14 @@ public class Player : MonoBehaviour {
                 scriptTrash = collision.gameObject.GetComponent<Trash>();
 
             if (GameController.tagsFoods.Contains(collision.tag)) {    //Aqui será detectado quando o player tocar na comida, já que foi configurado para que não haja detecção entre colisão do hitbox de diálogo com comidas
-                if (!hasFood) {
+                if (!hasFood && !(collision.gameObject.layer == LayerMask.NameToLayer("FoodDropped"))) {   //Se já não tiver comida e se não tiver acabdo de dropar
                     GameObject objFood = collision.gameObject;
                     hasFood = true;
                     this.food = objFood;
                     this.idFood = objFood.GetComponent<Food>().idFood;
                     changeAnimationFood(collision.gameObject, false);
                     objFood.SetActive(false);
-                    objFood.GetComponent<Food>().tag = "ComidaBoca";   //Esta será a tag temporária do objeto. Ao ser dropada, a comida ativará sua animação e voltará a ter sua tag original
-                    objFood.GetComponent<Food>().isLixo = false;
+                    //objFood.GetComponent<Food>().tag = "ComidaBoca";   //Esta será a tag temporária do objeto. Ao ser dropada, a comida ativará sua animação e voltará a ter sua tag original
                     //Alternado variável de diálogo:
                     int randomValueFoodDialogue = randFoodInt(this.idFood);
                     DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComida", randomValueFoodDialogue);
@@ -167,6 +162,8 @@ public class Player : MonoBehaviour {
                 scriptTrash.stopSearchingFood();
                 scriptTrash = null;
             }
+            if (collision.gameObject.layer == LayerMask.NameToLayer("FoodDropped"))   //Depois de dropar a comida, ela fica com a tag "FoodDropped". Quando saímos da área de colisão, a comida volta a ter sua tag original
+                collision.gameObject.layer = LayerMask.NameToLayer("Food");
         }
     }
 
@@ -174,25 +171,20 @@ public class Player : MonoBehaviour {
     private void dropFood(bool disappear) {           //TENHO QUE VOLTAR AQUI DEPOIS (NÃO ESTÁ FINALIZADO)   o parâmetro disappear define se a comida vai desaparecer ou vai ficar no chão
         if (!GameController.gameIsPaused()) {
             if (this.food != null) {
-                //Debug.Log("Tem comida!");
                 changeAnimationFood(null, true);    //Chamando de volta a animação sem comida
-                this.food = null;
-                this.idFood = 0;
                 hasFood = false;
-                //Alterando variável de diálogo:
-                if (!disappear)  //Se eu estiver simplesemente dropando a comida no chão:
-                    DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComida", 0);
-
-
-                //this.food.gameObject.transform.parent = transform;
-                //this.food.gameObject.transform.SetParent(null);
-                //Vector3 posicaoComida = this.food.gameObject.transform.position;
-                //posicaoComida.x = transform.position.x + 5;
-                //posicaoComida.y = transform.position.y;
-                //this.food.gameObject.transform.position = posicaoComida;
-                //this.food.gameObject.SetActive(true);
-                //Debug.Log(posicaoComida.x + "  " + posicaoComida.y);
-                //this.food.gameObject.transform.position = posicaoComida;
+                this.idFood = 0;
+                if (!disappear) {  //Se eu estiver dropando a comida no chão:
+                    DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComida", 0);   //Alterando variável de diálogo
+                    this.food.layer = LayerMask.NameToLayer("FoodDropped");
+                    //Definindo onde a comida aparecerá ao ser dropada:
+                    Vector2 positionFood = new Vector2(movementVector.x, movementVector.y).normalized;
+                    this.food.transform.position = (Vector2)gameObject.transform.position - positionFood * 1.2f;
+                    this.food.gameObject.GetComponent<Food>().isLixo = false;
+                    this.food.SetActive(true);
+                    Debug.Log("Dropou a comida!");
+                }
+                this.food = null;
             }
             else
                 Debug.Log("Não tem comida!");

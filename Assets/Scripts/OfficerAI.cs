@@ -170,7 +170,6 @@ public class OfficerAI : MonoBehaviour {
     private void UpdateAnimation() {
         if(currentWaypoint < path.vectorPath.Count) {
             Vector2 teste = (Vector2)path.vectorPath[currentWaypoint] - rb.position;
-            Debug.Log("x: " + teste.x + "   y: " + teste.y);
             //Animações do guarda andando:
             if (Mathf.Abs(teste.x) > 0.0001 || Mathf.Abs(teste.y) > 0.0001)
                 anim.SetFloat("Speed", 5);
@@ -180,13 +179,11 @@ public class OfficerAI : MonoBehaviour {
                 int x = teste.x < 0 ? -1 : 1;
                 anim.SetFloat("Horizontal", x);
                 anim.SetFloat("Vertical", 0);
-                Debug.Log("popopopop");
             }
             else {
                 int y = teste.y < 0 ? -1 : 1;
                 anim.SetFloat("Vertical", y);
                 anim.SetFloat("Horizontal", 0);
-                Debug.Log("irewirwjeri");
             }
         }
     }

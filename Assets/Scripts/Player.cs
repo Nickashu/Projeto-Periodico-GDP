@@ -1,4 +1,3 @@
-using Ink.Parsed;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,27 +9,30 @@ public class Player : MonoBehaviour {
     private Vector2 movementVector;
     private DialogueTrigger triggerDialogue;
     private Trash scriptTrash;
-    private GameObject food, NPCDialogue=null;
+    private GameObject food, NPCDialogue=null, barStamina;
 
     public int idFood = 0;
-    private float speed = 3.5f;
-    private bool isRunning = false, hasFood=false;
+    private float speed = 3.5f, maxStamina, currentStamina, recoverStaminaTax=15f, loseStaminaTax=20f;   //recoverStaminaTax e loseStaminaTax representam, respectivamente, a taxa de recuperação e perda de stamina por segundo
+    private bool isRunning = false, hasFood = false, isMoving = false, recoveringStamina = false;
     private int contInteracoes = 0, limitInteractionsTutorial=1, lives;    //qntFood representa quantas comidas pegamos durante o jogo
 
     public TextMeshProUGUI txtTutorialInteractions, txtVidas;
-    public GameObject transitionAfterCaught;   //Esta será a tela de transição que aparecerá depois que o gato for pego
+    public GameObject transitionAfterCaught, outerBarStamina;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        lives = 2;
+        barStamina = outerBarStamina.transform.GetChild(0).gameObject;
+        maxStamina = outerBarStamina.GetComponent<RectTransform>().rect.width;
+        currentStamina = barStamina.GetComponent<RectTransform>().rect.width;
+        lives = 7;
         updateCanvasVida();
     }
 
     void Update() {
         if (!GameController.gameIsPaused()) {    //Se o jogo não estiver parado
             /*Mecânica de corrida*/
-            if (Input.GetKey(KeyCode.LeftShift)) {
+            if (Input.GetKey(KeyCode.LeftShift) && !recoveringStamina) {
                 if (!isRunning)
                     speed *= 2;
                 isRunning = true;
@@ -84,6 +86,7 @@ public class Player : MonoBehaviour {
                 DialogueController.GetInstance().dialogueVariablesController.CheckVariableValues();
         }
 
+        updateStamina();
     }
 
     public void SetMovement(InputAction.CallbackContext value) {
@@ -98,10 +101,14 @@ public class Player : MonoBehaviour {
             rb.velocity = (vectorResult * speed);
 
             //Animações do gato andando e correndo:
-            if (movementVector.x != 0 || movementVector.y != 0) 
+            if (movementVector.x != 0 || movementVector.y != 0) {
+                isMoving = true;
                 anim.SetFloat("Speed", 5);
-            else 
+            }
+            else {
+                isMoving = false;
                 anim.SetFloat("Speed", 0);
+            }
             anim.SetBool("isRunning", isRunning);
             anim.SetFloat("Horizontal", movementVector.x);
             anim.SetFloat("Vertical", movementVector.y);
@@ -167,6 +174,28 @@ public class Player : MonoBehaviour {
         }
     }
 
+
+    private void updateStamina() {   //Esta função é responsável pora tualizar a stamina do gato
+        float newStamina = 0f;
+        if (isMoving && isRunning) {
+            newStamina = currentStamina - loseStaminaTax * Time.deltaTime;
+            if (newStamina < 0)
+                newStamina = 0;
+        }
+        else {
+            newStamina = currentStamina + recoverStaminaTax * Time.deltaTime;
+            if (newStamina > maxStamina)
+                newStamina = maxStamina;
+        }
+        if (newStamina == 0)
+            recoveringStamina = true;
+        if (recoveringStamina && newStamina >= maxStamina / 2)   //Se usou toda a stamina, só vai poder voltar a correr quando a barra chegar na metade
+            recoveringStamina = false;
+
+        //Debug.Log("Nova stamina: " + newStamina);
+        barStamina.GetComponent<RectTransform>().sizeDelta = new Vector2(Mathf.Lerp(currentStamina, newStamina, 0.1f), barStamina.GetComponent<RectTransform>().sizeDelta.y);
+        currentStamina = newStamina;
+    }
 
     private void dropFood(bool disappear) {           //TENHO QUE VOLTAR AQUI DEPOIS (NÃO ESTÁ FINALIZADO)   o parâmetro disappear define se a comida vai desaparecer ou vai ficar no chão
         if (!GameController.gameIsPaused()) {

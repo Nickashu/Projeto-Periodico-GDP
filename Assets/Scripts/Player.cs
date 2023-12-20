@@ -32,7 +32,8 @@ public class Player : MonoBehaviour {
     void Update() {
         if (!GameController.gameIsPaused()) {    //Se o jogo não estiver parado
             /*Mecânica de corrida*/
-            if (Input.GetKey(KeyCode.LeftShift) && !recoveringStamina) {
+            //if (Input.GetKey(KeyCode.LeftShift) && !recoveringStamina) {
+            if (Input.GetKey(KeyCode.LeftShift)) {  //Debug
                 if (!isRunning)
                     speed *= 2;
                 isRunning = true;

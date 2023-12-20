@@ -7,6 +7,7 @@ public class OfficerAI : MonoBehaviour {
     private Transform target;   //target representa a posição para a qual o guarda está indo
     public Transform transformPlayer;
     private Player scriptPlayer;
+    private Animator anim;
     public List<Transform> patrolPoints;    //Estas serão as posições que o guarda passa ao patrulhar o cenário
 
     [SerializeField]
@@ -28,6 +29,7 @@ public class OfficerAI : MonoBehaviour {
     private void Start() {
         seekerScript = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
         scriptPlayer = transformPlayer.gameObject.GetComponent<Player>();
 
         patrolPointId = 0;
@@ -36,7 +38,9 @@ public class OfficerAI : MonoBehaviour {
         //Inicializando um caminho para o guarda seguir e fazendo este caminho ser calculado continuamente por meio do InvokeRepeating:
         InvokeRepeating("UpdatePath", 0f, 0.1f);
 
-        InvokeRepeating("PlaySoundOfficer", 0f, 3f);
+        InvokeRepeating("UpdateAnimation", 1f, 1f);
+
+        //InvokeRepeating("PlaySoundOfficer", 0f, 3f);
     }
     private void Update() {
         float playerDistance = Vector2.Distance(rb.position, transformPlayer.position);
@@ -66,6 +70,7 @@ public class OfficerAI : MonoBehaviour {
                     if (currentWaypoint >= path.vectorPath.Count) {   //Se chegamos ao fim do caminho
                         if (!isChasing && !flagMovement) {   //Se não está perseguido o jogador, vou atualizar o ponto de patrulha
                             flagMovement = true;
+                            movementForce = Vector2.zero;
                             if (patrolPointId == 0)
                                 going = true;
                             else if (patrolPointId == patrolPoints.Count - 1)
@@ -76,21 +81,22 @@ public class OfficerAI : MonoBehaviour {
                                 patrolPointId--;
 
                             updatePatrolPoint();   //Atualizando o ponto para o qual o inimigo seguirá
+                            UpdateAnimation();
                         }
                     }
                     else {    //Se não chegamos ao fim do caminho, vamos mover o guarda para seu alvo
                         flagMovement = false;
                         movementDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
                         movementForce = movementDirection * speed * Time.deltaTime;
-                        //Fazendo o guarda se mover através do RigidBody2D:
-                        //rb.MovePosition(rb.position + movementForce);
-                        //rb.velocity = movementForce;
-                        rb.AddForce(movementForce);
 
                         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
                         if (distance < nextWaypointDistance)
                             currentWaypoint++;
                     }
+                    //Fazendo o guarda se mover através do RigidBody2D:
+                    //rb.MovePosition(rb.position + movementForce);
+                    //rb.velocity = movementForce;
+                    rb.AddForce(movementForce);
                 }
             }
             else {   //Se o guarda conseguiu chegar até o gato
@@ -131,13 +137,17 @@ public class OfficerAI : MonoBehaviour {
         scriptPlayer.looseLife();   //Fazendo o jogador perder uma vida e voltar ao início do mapa
     }
 
-    private void OnCollisionStay2D(Collision2D collision) {
+    private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught) {
-            Debug.Log("Tá tocando!!!");
-            GameController.playerCaught = true;
+            anim.SetFloat("Speed", 0);
+            //GameController.playerCaught = true;
         }
     }
-
+    private void OnCollisionStay2D(Collision2D collision) {
+        if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught)
+            Debug.Log("Tá tocando!!!");
+    }
+    /*
     private void PlaySoundOfficer() { 
         if (!isChasing) {   //Se o guarda estiver na patrulha
             System.Random random = new System.Random();
@@ -152,6 +162,31 @@ public class OfficerAI : MonoBehaviour {
                     SoundController.GetInstance().PlaySound("guarda_falando", gameObject);
                     //Debug.Log("falou");
                 }
+            }
+        }
+    }
+    */
+
+    private void UpdateAnimation() {
+        if(currentWaypoint < path.vectorPath.Count) {
+            Vector2 teste = (Vector2)path.vectorPath[currentWaypoint] - rb.position;
+            Debug.Log("x: " + teste.x + "   y: " + teste.y);
+            //Animações do guarda andando:
+            if (Mathf.Abs(teste.x) > 0.0001 || Mathf.Abs(teste.y) > 0.0001)
+                anim.SetFloat("Speed", 5);
+            else
+                anim.SetFloat("Speed", 0);
+            if (Mathf.Abs(teste.x) > Mathf.Abs(teste.y)) {
+                int x = teste.x < 0 ? -1 : 1;
+                anim.SetFloat("Horizontal", x);
+                anim.SetFloat("Vertical", 0);
+                Debug.Log("popopopop");
+            }
+            else {
+                int y = teste.y < 0 ? -1 : 1;
+                anim.SetFloat("Vertical", y);
+                anim.SetFloat("Horizontal", 0);
+                Debug.Log("irewirwjeri");
             }
         }
     }

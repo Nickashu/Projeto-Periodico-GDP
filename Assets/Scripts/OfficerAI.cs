@@ -35,11 +35,13 @@ public class OfficerAI : MonoBehaviour {
 
         //Inicializando um caminho para o guarda seguir e fazendo este caminho ser calculado continuamente por meio do InvokeRepeating:
         InvokeRepeating("UpdatePath", 0f, 0.1f);
+
+        InvokeRepeating("PlaySoundOfficer", 0f, 3f);
     }
     private void Update() {
         float playerDistance = Vector2.Distance(rb.position, transformPlayer.position);
         //Debug.Log("Distância do jogador: " + playerDistance);
-        if(playerDistance <= 15f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
+        if(playerDistance <= 10f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
             if(!isChasing)
                 target = transformPlayer;
             isChasing = true;
@@ -133,6 +135,24 @@ public class OfficerAI : MonoBehaviour {
         if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught) {
             Debug.Log("Tá tocando!!!");
             GameController.playerCaught = true;
+        }
+    }
+
+    private void PlaySoundOfficer() { 
+        if (!isChasing) {   //Se o guarda estiver na patrulha
+            System.Random random = new System.Random();
+            int randNum = random.Next(1, 4);
+            if(randNum != 1) { 
+                randNum = random.Next(1, 3);
+                if (randNum == 1) {
+                    SoundController.GetInstance().PlaySound("guarda_assobio", gameObject);
+                    //Debug.Log("assobiou");
+                }
+                else {
+                    SoundController.GetInstance().PlaySound("guarda_falando", gameObject);
+                    //Debug.Log("falou");
+                }
+            }
         }
     }
 }

@@ -64,4 +64,8 @@ public class Crow : MonoBehaviour {
         GameController.acabouTutorial = true;
         wallBlocking.SetActive(false);    //Desbloqueando a entrada para o jogador
     }
+
+    private void playSoundJump() {
+        SoundController.GetInstance().PlaySound("corvo_pulo", gameObject);
+    }
 }

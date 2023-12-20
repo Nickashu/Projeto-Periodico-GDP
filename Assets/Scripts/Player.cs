@@ -17,7 +17,7 @@ public class Player : MonoBehaviour {
     private int contInteracoes = 0, limitInteractionsTutorial=1, lives;    //qntFood representa quantas comidas pegamos durante o jogo
 
     public TextMeshProUGUI txtTutorialInteractions, txtVidas;
-    public GameObject transitionAfterCaught, outerBarStamina;
+    public GameObject outerBarStamina;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -248,8 +248,7 @@ public class Player : MonoBehaviour {
     public void looseLife() {    //Esta função será chamada pelo script do guarda quando o gato for pego
         lives--;
         updateCanvasVida();
-        transitionAfterCaught.SetActive(false);
-        transitionAfterCaught.SetActive(true);
+        TransitionsController.GetInstance().TransitionAfterCaught();
         if(lives == 0)
             Debug.Log("Morreu!");
     }

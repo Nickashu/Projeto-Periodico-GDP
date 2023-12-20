@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class TransitionsController : MonoBehaviour {
     private static TransitionsController instance;
-    private Animator animTransitionScenes, animTransitionCutscenes, animTransitionGame;
+    private Animator animTransitionScenes, animTransitionCutscenes;
     private float transistionTimeCutscenes = 1f, transistionTimeScenes = 2f;
     private int idCutscene = 0;
     private bool isLoadingCutscene=false;
@@ -23,11 +23,11 @@ public class TransitionsController : MonoBehaviour {
         //DontDestroyOnLoad(gameObject);
 
 
+        transform.GetChild(2).gameObject.SetActive(false);   //Este será o objeto responsável pela transição que ocorre quando o personagem é capturado no jogo
 
-        if(!SceneManager.GetActiveScene().name.Contains("Principal")) {
+        if (!SceneManager.GetActiveScene().name.Contains("Principal")) {
             transform.GetChild(0).gameObject.SetActive(true);
             transform.GetChild(1).gameObject.SetActive(true);
-            //transform.GetChild(2).gameObject.SetActive(false);   //Desativando a transição do game
             if (cutscenes.Length > 0)   //Se tiverem cutscenes na cena
                 cutscenes[idCutscene].SetActive(true);
             animTransitionScenes = transform.GetChild(0).GetComponent<Animator>();
@@ -36,9 +36,7 @@ public class TransitionsController : MonoBehaviour {
         else {
             transform.GetChild(0).gameObject.SetActive(true);
             transform.GetChild(1).gameObject.SetActive(false);   //Desativando a transição de cutscenes
-            //transform.GetChild(2).gameObject.SetActive(true);
             animTransitionScenes = transform.GetChild(0).GetComponent<Animator>();
-            //animTransitionGame = transform.GetChild(2).GetComponent<Animator>();
         }
     }
 
@@ -66,6 +64,11 @@ public class TransitionsController : MonoBehaviour {
         }
         else
             StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));   //Carregando a próxima cena
+    }
+
+    public void TransitionAfterCaught() {
+        transform.GetChild(2).gameObject.SetActive(false);
+        transform.GetChild(2).gameObject.SetActive(true);
     }
 
     private IEnumerator LoadScene(int sceneIndex) {

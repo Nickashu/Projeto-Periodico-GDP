@@ -35,11 +35,8 @@ public class OfficerAI : MonoBehaviour {
         patrolPointId = 0;
         updatePatrolPoint();
 
-        //Inicializando um caminho para o guarda seguir e fazendo este caminho ser calculado continuamente por meio do InvokeRepeating:
-        InvokeRepeating("UpdatePath", 0f, 0.1f);
-
-        InvokeRepeating("UpdateAnimation", 1f, 1f);
-
+        InvokeRepeating("UpdatePath", 0f, 0.1f);   //Inicializando um caminho para o guarda seguir e fazendo este caminho ser calculado continuamente
+        InvokeRepeating("UpdateAnimation", 1f, 0.3f);   //Atualizando a animação do guarda andando
         //InvokeRepeating("PlaySoundOfficer", 0f, 3f);
     }
     private void Update() {
@@ -65,8 +62,8 @@ public class OfficerAI : MonoBehaviour {
         if (!GameController.gameIsPaused()) {
             if (!GameController.playerCaught) {
                 if (path != null) {   //Se existir um caminho calculado
-                    Vector2 movementDirection=new Vector2();
-                    Vector2 movementForce=new Vector2();
+                    Vector2 movementDirection = new Vector2();
+                    Vector2 movementForce = new Vector2();
                     if (currentWaypoint >= path.vectorPath.Count) {   //Se chegamos ao fim do caminho
                         if (!isChasing && !flagMovement) {   //Se não está perseguido o jogador, vou atualizar o ponto de patrulha
                             flagMovement = true;
@@ -93,10 +90,9 @@ public class OfficerAI : MonoBehaviour {
                         if (distance < nextWaypointDistance)
                             currentWaypoint++;
                     }
-                    //Fazendo o guarda se mover através do RigidBody2D:
                     //rb.MovePosition(rb.position + movementForce);
                     //rb.velocity = movementForce;
-                    rb.AddForce(movementForce);
+                    rb.AddForce(movementForce);   //Fazendo o guarda se mover através do RigidBody2D
                 }
             }
             else {   //Se o guarda conseguiu chegar até o gato
@@ -104,8 +100,10 @@ public class OfficerAI : MonoBehaviour {
                 StartCoroutine(catchPlayer());
             }
         }
-        else
-            rb.velocity = Vector2.zero;
+        else {
+            anim.SetFloat("Speed", 0);
+            rb.velocity = Vector2.zero;   //Fazendo o guarda parar de se mover
+        }
     }
 
     private void UpdatePath() {
@@ -138,10 +136,8 @@ public class OfficerAI : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught) {
-            anim.SetFloat("Speed", 0);
+        if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught)
             GameController.playerCaught = true;
-        }
     }
     private void OnCollisionStay2D(Collision2D collision) {
         if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught)

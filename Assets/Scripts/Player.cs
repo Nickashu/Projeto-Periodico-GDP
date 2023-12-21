@@ -16,8 +16,8 @@ public class Player : MonoBehaviour {
     private bool isRunning = false, hasFood = false, isMoving = false, recoveringStamina = false;
     private int contInteracoes = 0, limitInteractionsTutorial=1, lives;    //qntFood representa quantas comidas pegamos durante o jogo
 
-    public TextMeshProUGUI txtTutorialInteractions, txtVidas;
-    public GameObject outerBarStamina;
+    public TextMeshProUGUI txtTutorialInteractions;
+    public GameObject outerBarStamina, canvasLives;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
         barStamina = outerBarStamina.transform.GetChild(0).gameObject;
         maxStamina = outerBarStamina.GetComponent<RectTransform>().rect.width;
         currentStamina = barStamina.GetComponent<RectTransform>().rect.width;
-        lives = 2;
+        lives = 7;
         updateCanvasVida();
     }
 
@@ -265,6 +265,6 @@ public class Player : MonoBehaviour {
     }
 
     private void updateCanvasVida() {
-        txtVidas.text = lives.ToString();
+        canvasLives.GetComponent<Animator>().SetInteger("vidas", lives);   //Atualizando a animação das vidas
     }
 }

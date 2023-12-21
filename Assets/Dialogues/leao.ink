@@ -1,5 +1,6 @@
 INCLUDE Variaveis.ink
 
+{leaoSatisfeito == true: -> conversaFinal}
 {falouLeao1 == true && comidaLeao != 0: -> darComida}
 {falouLeao1 == false: -> main | -> jaFalou}
 
@@ -40,4 +41,12 @@ Vejamos o que temos aqui... #character: leao  #state: leao_normal
 ~numComidasLeao = numComidasLeao + 1
 }
 {updateComida(0)}
+-> END
+
+
+=== conversaFinal ===
+Bom, você realmente cumpriu com o acordo... #character: leao  #state: leao_normal
+Neste caso, pode levar seu amigo. Já não estou mais com fome. #character: leao  #state: leao_normal
+Vamos para casa! #character: gato  #state: gato_feliz
+Vamos! #character: amigo  #state: amigo_feliz
 -> END

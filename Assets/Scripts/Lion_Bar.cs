@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lion_Bar : MonoBehaviour {
 
     private float totalWidth, barWidth, durationAnimationBar=1f;
-    public GameObject bar, pointsFood;
+    public GameObject bar, pointsFood, lion;
 
     void Start() {
         barWidth = bar.GetComponent<RectTransform>().rect.width;
@@ -15,9 +15,9 @@ public class Lion_Bar : MonoBehaviour {
     public void changeBar(int points) {
         float newBarWidth = barWidth + points;
         GameController.changingLionBar = false;
-        Debug.Log(newBarWidth);
         if(newBarWidth > totalWidth) {
             Debug.Log("Barra chegou no limite superior");
+            GameController.gamePaused = true;   //Pausando o jogo até a barra de fome mudar
             newBarWidth = totalWidth;
         }
         else if(newBarWidth < 0) {
@@ -55,5 +55,15 @@ public class Lion_Bar : MonoBehaviour {
         StopAllCoroutines();
         bar.GetComponent<RectTransform>().sizeDelta = new Vector2(finalWidth, bar.GetComponent<RectTransform>().sizeDelta.y);
         barWidth = finalWidth;
+        if (barWidth == totalWidth) {   //Se tivermos enchido a barra de comida
+            DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("matouFomeLeao", null);
+            StartCoroutine(triggerLastDialogue());
+        }
+    }
+
+    private IEnumerator triggerLastDialogue() {
+        yield return new WaitForSeconds(2f);
+        DialogueTrigger dialogueLion = lion.GetComponent<DialogueTrigger>();
+        dialogueLion.TriggerDialogue();   //Falando com o leão pela última vez
     }
 }

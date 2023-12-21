@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -17,10 +18,16 @@ public class GameController : MonoBehaviour {
     public static float comecoMapaX=0, comecoMapaY=0;
     public static int idComidaLeao = 0, idEnding = -1;
 
-    private bool beginTimer = false;
-    private float timerGame=300f;   //Aqui está o tempo do timer em segundos
+    private float timerGame = 5f * 60f;   //Aqui está o tempo do timer em segundos
     private int timerSeconds, timerMinutes;
     private static int numComidasLeao = 0;
+    private static bool completedLionBar = false, beginTimer = false;
+
+    public enum FinaisJogo {
+        FinalBom = 0,
+        FinalRuim = 1,
+        GameOver = 2
+    }
 
     public static void checkVariablesDialogue(Dictionary<string, Ink.Runtime.Object> dictionaryVariables) {    //Este método será responsável por checar algumas variáveis de diálogos que terão efeito no jogo
         foreach (KeyValuePair<string, Ink.Runtime.Object> pair in dictionaryVariables) {
@@ -46,6 +53,13 @@ public class GameController : MonoBehaviour {
                     changingLionBar = true;
                 }
             }
+
+            if (chave == "leaoSatisfeito") {
+                bool value = ((Ink.Runtime.BoolValue)DialogueController.GetInstance().GetVariableState(chave)).value;
+                if (value)   //Se conseguimos encher a barra de fome do leão e terminamos o último diálogo
+                    completedLionBar = true;
+                
+            }
         }
     }
 
@@ -58,24 +72,52 @@ public class GameController : MonoBehaviour {
             canvasLionBar.SetActive(true);
             beginTimer = true;
         }
-        else
-            beginTimer = false;
 
-        if (beginTimer && !gameIsPaused())
-            updateTimer();   //Atualizando o timer
+        if (beginTimer && !gameIsPaused()) {
+            if (timerGame <= 0) {    //Se o tempo acabar
+                gamePaused = true;
+                beginTimer = false;
+                timerGame = 0;
+                updateTimer();
+                StartCoroutine(endGame(true));
+            }
+            else
+                updateTimer();   //Atualizando o timer
+        }
 
         if (changingLionBar)
             canvasLionBar.GetComponent<Lion_Bar>().changeBar(dicIdFoodPoints[idComidaLeao]);   //Fazendo a barra de comida do leão variar
 
+        if (completedLionBar) {   //Se conseguimos encher a barra de fome do leão
+            completedLionBar = false;
+            gamePaused = true;
+            StartCoroutine(endGame(false));
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Escape))   //Apertar esc para sair do jogo
             Application.Quit();
+    }
+
+    private IEnumerator endGame(bool timeOver) {    //Esta co-rotina será chamada quando terminamos o jogo
+        float timeWait = 2f;
+        if (timeOver)
+            timeWait = 4f;
+        yield return new WaitForSeconds(timeWait);
+        if(timeOver)
+            TransitionsController.GetInstance().LoadLastScene((int)FinaisJogo.FinalRuim);
+        else
+            TransitionsController.GetInstance().LoadLastScene((int)FinaisJogo.FinalBom);
     }
 
     private void updateTimer() {
         timerGame -= Time.deltaTime;
         timerSeconds = Mathf.FloorToInt(timerGame % 60);
         timerMinutes = Mathf.FloorToInt(timerGame / 60);
-        canvasTimer.GetComponent<TextMeshProUGUI>().text = string.Format("{0:00}:{1:00}", timerMinutes, timerSeconds);   //Mostrando os minutos e segundos formatados
+        if(timerGame > 0)
+            canvasTimer.GetComponent<TextMeshProUGUI>().text = string.Format("{0:00}:{1:00}", timerMinutes, timerSeconds);   //Mostrando os minutos e segundos formatados
+        else
+            canvasTimer.GetComponent<TextMeshProUGUI>().text = string.Format("{0:00}:{1:00}", 0, 0);
     }
 
     public static bool gameIsPaused() {    //Função usada para verificar quando o jogo está pausado
@@ -87,6 +129,7 @@ public class GameController : MonoBehaviour {
     public static void resetGame() {   //Método para resetar todas as variáveis importantes para o jogo
         terminouDeFalarCorvo1 = false;
         falouLeao1 = false;
+        beginTimer = false;
         acabouTutorial = false;
         gamePaused = false;
         changingLionBar = false;
@@ -94,6 +137,7 @@ public class GameController : MonoBehaviour {
         idComidaLeao = 0;
         idEnding = -1;
         numComidasLeao = 0;
+        completedLionBar = false;
         DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("resetVariables", null);
     }
 }

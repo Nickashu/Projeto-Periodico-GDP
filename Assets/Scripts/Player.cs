@@ -83,11 +83,12 @@ public class Player : MonoBehaviour {
                 dropFood(false);
 
             //Debug:
-            if (Input.GetKeyUp(KeyCode.Alpha9))
-                DialogueController.GetInstance().dialogueVariablesController.CheckVariableValues();
-        }
+            //if (Input.GetKeyUp(KeyCode.Alpha9))
+            //    DialogueController.GetInstance().dialogueVariablesController.CheckVariableValues();
 
-        updateStamina();
+
+            updateStamina();
+        }
     }
 
     public void SetMovement(InputAction.CallbackContext value) {
@@ -250,7 +251,7 @@ public class Player : MonoBehaviour {
         updateCanvasVida();
         if(lives == 0) {
             Debug.Log("Morreu");
-            TransitionsController.GetInstance().LoadLastScene(2);
+            TransitionsController.GetInstance().LoadLastScene((int)GameController.FinaisJogo.GameOver);
         }
         else
             TransitionsController.GetInstance().TransitionAfterCaught();

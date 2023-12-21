@@ -1533,7 +1533,7 @@ GameObject:
   - component: {fileID: 2673567082589186775}
   - component: {fileID: 8605837713214848832}
   m_Layer: 0
-  m_Name: palette_cenario2
+  m_Name: palette_ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

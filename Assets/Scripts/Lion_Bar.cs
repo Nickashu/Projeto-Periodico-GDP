@@ -15,7 +15,7 @@ public class Lion_Bar : MonoBehaviour {
     public void changeBar(int points) {
         float newBarWidth = barWidth + points;
         GameController.changingLionBar = false;
-        if(newBarWidth > totalWidth) {
+        if(newBarWidth >= totalWidth) {
             Debug.Log("Barra chegou no limite superior");
             GameController.gamePaused = true;   //Pausando o jogo até a barra de fome mudar
             newBarWidth = totalWidth;

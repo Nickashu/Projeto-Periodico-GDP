@@ -10,3 +10,12 @@ VAR numComidasLeao = 0
 === function updateComida(intComida) ===
 ~comidaLeao = intComida
 ~comidaCorvo = intComida
+
+
+=== function resetVariables() ===
+~falouCorvo1 = false
+~terminouDeFalarCorvo1 = false
+~comidaCorvo=0
+~falouLeao1 = false
+~comidaLeao = 0
+~numComidasLeao = 0

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,8 @@ public class TransitionsController : MonoBehaviour {
     private int idCutscene = 0;
     private bool isLoadingCutscene=false;
 
-    public GameObject[] cutscenes;
+    public List<GameObject> cutscenes;
+    public GameObject endings;
 
     public static TransitionsController GetInstance() {
         return instance;
@@ -20,15 +22,27 @@ public class TransitionsController : MonoBehaviour {
             instance = this;
         else
             Destroy(gameObject);
-        //DontDestroyOnLoad(gameObject);
-
 
         transform.GetChild(2).gameObject.SetActive(false);   //Este será o objeto responsável pela transição que ocorre quando o personagem é capturado no jogo
 
         if (!SceneManager.GetActiveScene().name.Contains("Principal")) {
             transform.GetChild(0).gameObject.SetActive(true);
             transform.GetChild(1).gameObject.SetActive(true);
-            if (cutscenes.Length > 0)   //Se tiverem cutscenes na cena
+
+            if (SceneManager.GetActiveScene().name.Contains("Final")) {  //Se tivermos ido para a cena final
+                //GameController.gamePaused = false;
+                //GameController.playerCaught = false;
+
+                GameObject objTelaFinal = endings.transform.GetChild(GameController.idEnding).gameObject;
+                objTelaFinal.SetActive(true);   //Ativando a tela final respectiva
+                for (int i=0; i<objTelaFinal.transform.childCount; i++) {
+                    cutscenes.Add(objTelaFinal.transform.GetChild(i).gameObject);
+                }
+
+                GameController.resetGame();
+            }
+
+            if (cutscenes.Count > 0)   //Se tiverem cutscenes na cena
                 cutscenes[idCutscene].SetActive(true);
             animTransitionScenes = transform.GetChild(0).GetComponent<Animator>();
             animTransitionCutscenes = transform.GetChild(1).GetComponent<Animator>();
@@ -48,7 +62,7 @@ public class TransitionsController : MonoBehaviour {
     }
 
     public void LoadNextCutscene() {
-        if(idCutscene == cutscenes.Length - 1) {
+        if(idCutscene == cutscenes.Count - 1) {
             Debug.Log("Acabou cutscenes!");
             LoadNextScene();
         }
@@ -60,11 +74,19 @@ public class TransitionsController : MonoBehaviour {
 
     public void LoadNextScene() {
         if(SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1) {    //Se estivermos na última cena
-            Application.Quit();   //Aqui podemos sair do jogo ou voltar ao menu
+            Debug.Log("Jogo terminado!");
+            StartCoroutine(LoadScene(0));   //Carregando a primeira cena novamente
+            //Application.Quit();   //Aqui podemos sair do jogo ou voltar ao menu
         }
         else
             StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));   //Carregando a próxima cena
     }
+
+    public void LoadLastScene(int idEnding) {   //0 - Final Bom; 1 - Final Ruim; 2 - GameOver
+        GameController.idEnding = idEnding;
+        LoadNextScene();
+    }
+
 
     public void TransitionAfterCaught() {
         transform.GetChild(2).gameObject.SetActive(false);

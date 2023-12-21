@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour {
     public static bool terminouDeFalarCorvo1 = false, falouLeao1=false;    //Aqui ficarão algumas variáveis de diálogo que terão efeitos no jogo
     public static bool acabouTutorial = false, gamePaused = false, changingLionBar = false, playerCaught = false;
     public static float comecoMapaX=0, comecoMapaY=0;
-    public static int idComidaLeao = 0;
+    public static int idComidaLeao = 0, idEnding = -1;
 
     private bool beginTimer = false;
     private float timerGame=300f;   //Aqui está o tempo do timer em segundos
@@ -58,6 +58,8 @@ public class GameController : MonoBehaviour {
             canvasLionBar.SetActive(true);
             beginTimer = true;
         }
+        else
+            beginTimer = false;
 
         if (beginTimer && !gameIsPaused())
             updateTimer();   //Atualizando o timer
@@ -80,5 +82,18 @@ public class GameController : MonoBehaviour {
         if (gamePaused || DialogueController.GetInstance().dialogueActive)
             return true;
         return false;
+    }
+
+    public static void resetGame() {   //Método para resetar todas as variáveis importantes para o jogo
+        terminouDeFalarCorvo1 = false;
+        falouLeao1 = false;
+        acabouTutorial = false;
+        gamePaused = false;
+        changingLionBar = false;
+        playerCaught = false;
+        idComidaLeao = 0;
+        idEnding = -1;
+        numComidasLeao = 0;
+        DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("resetVariables", null);
     }
 }

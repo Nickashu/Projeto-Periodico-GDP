@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
         barStamina = outerBarStamina.transform.GetChild(0).gameObject;
         maxStamina = outerBarStamina.GetComponent<RectTransform>().rect.width;
         currentStamina = barStamina.GetComponent<RectTransform>().rect.width;
-        lives = 7;
+        lives = 2;
         updateCanvasVida();
     }
 
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour {
                     scriptTrash.stopSearchingFood();
             }
 
-            if (Input.GetKeyUp(KeyCode.Space))    //Barra de espaço será usada para dropar a comida atual
+            if (Input.GetKeyUp(KeyCode.C))    //Tecla que será usada para dropar a comida atual
                 dropFood(false);
 
             //Debug:
@@ -248,14 +248,19 @@ public class Player : MonoBehaviour {
     public void looseLife() {    //Esta função será chamada pelo script do guarda quando o gato for pego
         lives--;
         updateCanvasVida();
-        TransitionsController.GetInstance().TransitionAfterCaught();
-        if(lives == 0)
-            Debug.Log("Morreu!");
+        if(lives == 0) {
+            Debug.Log("Morreu");
+            TransitionsController.GetInstance().LoadLastScene(2);
+        }
+        else
+            TransitionsController.GetInstance().TransitionAfterCaught();
     }
 
     public void returnToInitialPosition() {
-        Vector3 newPosition = new Vector3(GameController.comecoMapaX, GameController.comecoMapaY);
-        transform.position = newPosition;
+        Vector3 newPositionPlayer = new Vector3(GameController.comecoMapaX, GameController.comecoMapaY, transform.position.z);
+        Vector3 newPositionCamera = new Vector3(GameController.comecoMapaX, GameController.comecoMapaY, Camera.main.transform.position.z);
+        transform.position = newPositionPlayer;
+        Camera.main.transform.position = newPositionCamera;
     }
 
     private void updateCanvasVida() {

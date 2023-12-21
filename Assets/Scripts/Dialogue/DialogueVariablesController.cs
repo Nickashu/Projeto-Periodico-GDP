@@ -41,10 +41,6 @@ public class DialogueVariablesController {
 
     public void ChangeSpecificVariable(string nameInkFunction, object argument=null) {    //Este método será chamado se eu quiser alterar uma variável específica após uma certa ação durante o jogo
         StartListening(dialogueOfVariables);
-        //dialogueOfVariables.ChoosePathString(nameInkFunction);
-        //while (dialogueOfVariables.canContinue)
-        //    dialogueOfVariables.Continue();
-
         //Sei que argument só será bool ou int:
         bool boolValue = false;
         int intValue = 0;

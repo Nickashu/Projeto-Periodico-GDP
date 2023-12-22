@@ -46,7 +46,7 @@ public class OfficerAI : MonoBehaviour {
         float playerDistance = Vector2.Distance(rb.position, transformPlayer.position);
         //Debug.Log("Distância do jogador: " + playerDistance);
         if(playerDistance <= 10f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
-            if (!isChasing) {
+            if (!isChasing && !GameController.gameIsPaused()) {
                 target = transformPlayer;
                 SoundController.GetInstance().PlaySound("guarda_surpreso", gameObject);
                 SoundController.GetInstance().PlaySound("OST_tension", null);
@@ -160,7 +160,7 @@ public class OfficerAI : MonoBehaviour {
 
 
     private void PlaySoundOfficer() { 
-        if (!isChasing) {   //Se o guarda estiver na patrulha
+        if (!isChasing && !GameController.gameIsPaused()) {   //Se o guarda estiver na patrulha
             System.Random random = new System.Random();
             int randNum = random.Next(1, 4);
             if(randNum != 1) { 

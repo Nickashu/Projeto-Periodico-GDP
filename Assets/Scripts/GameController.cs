@@ -25,8 +25,7 @@ public class GameController : MonoBehaviour {
 
     public enum FinaisJogo {
         FinalBom = 0,
-        FinalRuim = 1,
-        GameOver = 2
+        GameOver = 1
     }
 
     public static void checkVariablesDialogue(Dictionary<string, Ink.Runtime.Object> dictionaryVariables) {    //Este método será responsável por checar algumas variáveis de diálogos que terão efeito no jogo
@@ -106,7 +105,7 @@ public class GameController : MonoBehaviour {
         if (timeOver) {
             SoundController.GetInstance().PlaySound("palhaco_rindo", null);
             yield return new WaitForSeconds(timeWait);
-            TransitionsController.GetInstance().LoadLastScene((int)FinaisJogo.FinalRuim);
+            TransitionsController.GetInstance().LoadLastScene((int)FinaisJogo.GameOver);
         }
         else {
             TransitionsController.GetInstance().LoadLastScene((int)FinaisJogo.FinalBom);
@@ -138,7 +137,7 @@ public class GameController : MonoBehaviour {
         changingLionBar = false;
         playerCaught = false;
         idComidaLeao = 0;
-        idEnding = -1;
+        //idEnding = -1;
         numComidasLeao = 0;
         completedLionBar = false;
         DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("resetVariables", null);

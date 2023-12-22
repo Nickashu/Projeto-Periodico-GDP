@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8258360000167350372}
   - component: {fileID: 8258360000167350371}
-  - component: {fileID: 8258360000167350370}
-  - component: {fileID: 8258360000167350373}
   m_Layer: 0
   m_Name: portao2_0
   m_TagString: Untagged
@@ -86,55 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!61 &8258360000167350370
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8258360000167350369}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -3.2668786, y: 0.06386185}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47627854, y: 0.055458285}
-    oldSize: {x: 9.34, y: 11.74}
-    newSize: {x: 9.34, y: 11.74}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.3631258, y: 1.429884}
-  m_EdgeRadius: 0
---- !u!61 &8258360000167350373
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8258360000167350369}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.1268353, y: 0.060293198}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47627854, y: 0.055458285}
-    oldSize: {x: 9.34, y: 11.74}
-    newSize: {x: 9.34, y: 11.74}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.5294466, y: 1.4227467}
-  m_EdgeRadius: 0

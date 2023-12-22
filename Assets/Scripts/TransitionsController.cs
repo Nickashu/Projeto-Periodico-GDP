@@ -52,6 +52,20 @@ public class TransitionsController : MonoBehaviour {
             transform.GetChild(1).gameObject.SetActive(false);   //Desativando a transição de cutscenes
             animTransitionScenes = transform.GetChild(0).GetComponent<Animator>();
         }
+
+        playSceneMusic();   //Toca a música correspondente ao mudar de cena
+    }
+
+    private void playSceneMusic() {
+        if (SceneManager.GetActiveScene().name.Contains("Menu")) {
+            SoundController.GetInstance().PlaySound("OST_menu", null);
+        }
+        else if (SceneManager.GetActiveScene().name.Contains("Inicial")) {
+            SoundController.GetInstance().PlaySound("OST_safe", null);
+        }
+        else if (SceneManager.GetActiveScene().name.Contains("Final")) {
+            SoundController.GetInstance().PlaySound("OST_menu", null);
+        }
     }
 
     private void Update() {

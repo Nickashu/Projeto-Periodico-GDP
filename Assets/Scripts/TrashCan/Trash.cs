@@ -31,6 +31,7 @@ public class Trash : MonoBehaviour {
         if(anim != null)   //Se não for a lixeira de palhaço (que não tem animação ao ser aberta)
             anim.SetBool("open", true);
         gameObject.tag = "TrashOpened";
+        SoundController.GetInstance().PlaySound("lixo_aberto", null);
         food.GetComponent<Food>().tagFood = GameController.dicIdFood[this.idFood];    //Adicionando a tag específica na comida
         food.GetComponent<Food>().idFood = this.idFood;    //Adicionando o id específico na comida
         food.SetActive(true);

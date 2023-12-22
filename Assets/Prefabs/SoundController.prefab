@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6327404345295966112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6327404345295966114}
+  - component: {fileID: 6327404345295966113}
+  m_Layer: 0
+  m_Name: SoundController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6327404345295966114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327404345295966112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5049076, y: 31.607319, z: 4.9520364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6327404345295966113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327404345295966112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f4a045beeca744fa87294e12d4a17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: OST_safe
+    loop: 1
+    is3D: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 68a33b4a4edc52d498f543a48dbba148, type: 3}
+    volume: 0.3
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: OST_menu
+    loop: 1
+    is3D: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 80ee3560c3e1dda4d8fc1b88b711a1d0, type: 3}
+    volume: 0.8
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: OST_trilha1
+    loop: 1
+    is3D: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 4c097cce99938fb4d9e0077085daabdf, type: 3}
+    volume: 0.3
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: OST_trilha1_timer
+    loop: 1
+    is3D: 0
+    origins: []
+    clip: {fileID: 8300000, guid: e46061f598b4f32468b23aa9cedecf26, type: 3}
+    volume: 0.3
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: OST_tension
+    loop: 1
+    is3D: 0
+    origins: []
+    clip: {fileID: 8300000, guid: e3bb180d4c9ebe446a6f507e072f37f6, type: 3}
+    volume: 0.5
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: corvo_pulo
+    loop: 0
+    is3D: 1
+    origins: []
+    clip: {fileID: 8300000, guid: 64717742f387edd4cb8a7465a3b14e8e, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: leao_rosnando
+    loop: 0
+    is3D: 1
+    origins: []
+    clip: {fileID: 8300000, guid: d1ceee4e367a5d1448f0aadbdfcf3738, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: pega_comida
+    loop: 0
+    is3D: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 0fe8fcb5b4c491b48b399b8820e193b3, type: 3}
+    volume: 0.8
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: lixo_aberto
+    loop: 0
+    is3D: 0
+    origins: []
+    clip: {fileID: 8300000, guid: d50cd7226dc3c0a42a484f478654b665, type: 3}
+    volume: 0.5
+    pitch: 1
+    audioSource: {fileID: 0}

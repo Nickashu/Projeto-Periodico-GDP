@@ -146,12 +146,19 @@ public class Player : MonoBehaviour {
                     this.idFood = objFood.GetComponent<Food>().idFood;
                     changeAnimationFood(collision.gameObject, false);
                     objFood.SetActive(false);
-                    //objFood.GetComponent<Food>().tag = "ComidaBoca";   //Esta será a tag temporária do objeto. Ao ser dropada, a comida ativará sua animação e voltará a ter sua tag original
+                    SoundController.GetInstance().PlaySound("pega_comida", null);
                     //Alternado variável de diálogo:
                     int randomValueFoodDialogue = randFoodInt(this.idFood);
                     DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComida", randomValueFoodDialogue);
                 }
                 Debug.Log("Tocou comida!!");
+            }
+
+            if(collision.tag == "AreaGuardas") {   //Se entramos na área que tem guardas
+                SoundController.GetInstance().PlaySound("OST_trilha1", null);
+            }
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Leao")) {   //Se entramos na hitbox do leão
+                SoundController.GetInstance().PlaySound("leao_rosnando", collision.gameObject);
             }
         }
     }
@@ -173,6 +180,11 @@ public class Player : MonoBehaviour {
             }
             if (collision.gameObject.layer == LayerMask.NameToLayer("FoodDropped"))   //Depois de dropar a comida, ela fica com a tag "FoodDropped". Quando saímos da área de colisão, a comida volta a ter sua tag original
                 collision.gameObject.layer = LayerMask.NameToLayer("Food");
+
+
+            if (collision.tag == "AreaGuardas") {   //Se saímos da área que tem guardas
+                SoundController.GetInstance().PlaySound("OST_safe", null);
+            }
         }
     }
 
@@ -194,7 +206,6 @@ public class Player : MonoBehaviour {
         if (recoveringStamina && newStamina >= maxStamina / 2)   //Se usou toda a stamina, só vai poder voltar a correr quando a barra chegar na metade
             recoveringStamina = false;
 
-        //Debug.Log("Nova stamina: " + newStamina);
         barStamina.GetComponent<RectTransform>().sizeDelta = new Vector2(Mathf.Lerp(currentStamina, newStamina, 0.1f), barStamina.GetComponent<RectTransform>().sizeDelta.y);
         currentStamina = newStamina;
     }
@@ -210,7 +221,7 @@ public class Player : MonoBehaviour {
                     this.food.layer = LayerMask.NameToLayer("FoodDropped");
                     //Definindo onde a comida aparecerá ao ser dropada:
                     Vector2 positionFood = new Vector2(movementVector.x, movementVector.y).normalized;
-                    this.food.transform.position = (Vector2)gameObject.transform.position - positionFood * 1.2f;
+                    this.food.transform.position = (Vector2)gameObject.transform.position - positionFood * 1.5f;
                     this.food.gameObject.GetComponent<Food>().isLixo = false;
                     this.food.SetActive(true);
                     Debug.Log("Dropou a comida!");

@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
         maxStamina = outerBarStamina.GetComponent<RectTransform>().rect.width;
         currentStamina = barStamina.GetComponent<RectTransform>().rect.width;
         lives = 7;
-        updateCanvasVida();
+        //updateCanvasVida();
     }
 
     void Update() {

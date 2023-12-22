@@ -6442,6 +6442,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3455751333916118231, guid: d06004248a201554086b911c8d55d844, type: 3}
   m_PrefabInstance: {fileID: 697830906}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &724712945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6265658308193475213, guid: 1c3ab18bc4f518a43a724b3dc7120958, type: 3}
+  m_PrefabInstance: {fileID: 6265658307017883884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &731180735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6839,6 +6844,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3455751333916118231, guid: d06004248a201554086b911c8d55d844, type: 3}
   m_PrefabInstance: {fileID: 774044632}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &775528464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6265658308193475213, guid: 1c3ab18bc4f518a43a724b3dc7120958, type: 3}
+  m_PrefabInstance: {fileID: 1756691787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &790757895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7023,7 +7033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACwn+s9fdrCdgIAAC8FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVF1zojAU/StOnlcHrBbZt121dh/aOrU7feElkItkDAmThKrt+N83N4BQ1xfDOffj3JMLX4RLU0Fmld5ozp4UA/JzRPBMfox68hFOdK/kjn9CF/POmS0wiPqYV2q5cniIaUaVYDXPfsm9wODAgbXkudLlmu1hqYw1Ds6pMOAorSxmSwd9jcjJ/Y1jTDm70zTC06c7xcHo4o4ZSAu6D51OZrH7ReGszQjDYILI/bRNDCfxYra4i9bjYO5L1DITtKyA4Tx9pTjsKsymPk66UdsQpDIlBDetTmLPlfdhVxWgAY1gnLqxvTYML4DvC4sKh7kveW7Atp5oel5x7dxripLfqrG0pObQ6PqgosY20/m9l9QUffqPH4eezrUqH7u+YYA9bMGzwys9Z9TYgedDePVdeC2PVBxoKuC9APmsNlrVkjnS6hpTawPTVf94HW1ZQHbo8UbqDVhXvd/dFXcXjDNc/PSnpeBlitRk1gA7obzdfi9Au4v54wT7rTFtCYeiir8G3uh+uF4t8cC1sY5qp5QoL1W1xlCy9p7hNLVdKi3Bw63oCiQV9rx1ZeztFd5wg7Y3zAPFF6lt3nLd+3GT4uE+PghuqK06Xi/LFOr4BKZ4qa3gEnrRSDw7n5ZKymbDhp50abta5zQbpO1rzr6vFongDlLKFmFI52mQx+OApdGc3kdZkM5ZvIiI3z0u3ZxUbBuhrT3u1mRfXLo9674vo42mld92pulxwz9LNbCcy1ztMg0gX5oKV+GgXRP3UrI1486gHVjLpb9v8pUQobIDsORaKPGTrk9W06SvkpCKfyiLSEKW/oOSEISvu7zV8MHhiM27Yhdy+QdQSwMEFAAACAgAALCf67B8EVZtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJ5qnFqUmKKhaFhommSQZqlrkFKkrlpopl5skGSaYqlhblSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAALCf6z192sJ2AgAALwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAALCf67B8EVZtAAAAeAAAAAkAJAAAAAAAAAAAAAAAwwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB7AwAAAAA=
+    dataString: UEsDBBQAAAgIAACwn+tbCgYkcAIAAC0FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMly4jAQ/RVK5yFlk7DNbYYQMgcSKmQqF19kq41VyJJLC0tS/PuoZRs7DBfk93p5/dT2F+HSVJBZpVeas7ViQH4OCJ7Jj0FHPsOJ7pTc8k9oYz44swUG0RDzRi1XHo8xzagSrObZL7kTGBx50EmeK10u2Q4Wyljj4ZwKA57SymK29NDXgJz833COKWd/Gk3x9OlP82hw8ccMpAXdhcZ3c/xNmvg4jgIwGTVpnp89zO6ny2E0DgWczAQtK2A4TVenq/AwCnHSD9qE4FCZEoKbRiWx5yq4sK0K0IA2ME790EEZhhfAd4XFAfq5r3luwDaOaHp+5Np7Vxclv1VtaEnNvtZ1oMJhm9F4EiTVRdf/8cM40LlW5XPbN46why14tn+j54wa23O8Dz9+F+7kkYo9TQV8FCBf1EorJ5knrXaY6gyMHrvH62iLArJ9h9dSb0BXdX63F9xeL85wCdOfFoKXKVJ3DzWwFSrYHbYCtL+YP15w2BnTlPAoqvhr4J3u+svVEE9cG+upZkqJ8lLlNIaSZfAMp3F2obSEADeiK5BU2PPGl7G3V3jD9dreME8UX6OmecO1b8dNSoC7+Ci6oTbqeL0sU6jjGkzx6qzgEjrRSLx4nxZKynrD+p60aVunc5r10naOs++rRaZwDyllszim4zTK58OIpdMxnUyzKB2z+WxKwu5x6eekYlMLbezxtya74tLvWft1Gaw0rcK2M02PK/5Zqp7lXOZqm2kA+VpXuAoH7Zv4l5ItGfcGbcFaLsN9k6+ECJXtgSXXQkmYdHmymiZdlYRU/KAsIglZhM9JQhC+7vJGw4HDEZu3xS7k8g9QSwMEFAAACAgAALCf67B8EVZtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJ5qnFqUmKKhaFhommSQZqlrkFKkrlpopl5skGSaYqlhblSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAALCf61sKBiRwAgAALQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAALCf67B8EVZtAAAAeAAAAAkAJAAAAAAAAAAAAAAAvQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB1AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -8468,6 +8478,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[9].origins.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[10].origins.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[11].origins.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
       propertyPath: sounds.Array.data[5].origins.Array.data[0]
       value: 
       objectReference: {fileID: 1738041447}
@@ -8479,6 +8501,30 @@ PrefabInstance:
       propertyPath: sounds.Array.data[8].origins.Array.data[0]
       value: 
       objectReference: {fileID: 6820673111648937399, guid: 5ea0388925dc70e469bb9db4bceae665, type: 3}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[9].origins.Array.data[0]
+      value: 
+      objectReference: {fileID: 775528464}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[9].origins.Array.data[1]
+      value: 
+      objectReference: {fileID: 724712945}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[10].origins.Array.data[0]
+      value: 
+      objectReference: {fileID: 775528464}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[10].origins.Array.data[1]
+      value: 
+      objectReference: {fileID: 724712945}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[11].origins.Array.data[0]
+      value: 
+      objectReference: {fileID: 775528464}
+    - target: {fileID: 6327404345295966113, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
+      propertyPath: sounds.Array.data[11].origins.Array.data[1]
+      value: 
+      objectReference: {fileID: 724712945}
     - target: {fileID: 6327404345295966114, guid: 1d22f15b8065d364a8d3e474e8bb371b, type: 3}
       propertyPath: m_RootOrder
       value: 17

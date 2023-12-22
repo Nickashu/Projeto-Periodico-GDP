@@ -2,6 +2,7 @@ using UnityEngine;
 using Pathfinding;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.UIElements;
 
 public class OfficerAI : MonoBehaviour {
     private Transform target;   //target representa a posição para a qual o guarda está indo
@@ -33,18 +34,23 @@ public class OfficerAI : MonoBehaviour {
         scriptPlayer = transformPlayer.gameObject.GetComponent<Player>();
 
         patrolPointId = 0;
+        //timeSoundSurprise = intervalSoundSurprise;
         updatePatrolPoint();
 
         InvokeRepeating("UpdatePath", 0f, 0.1f);   //Inicializando um caminho para o guarda seguir e fazendo este caminho ser calculado continuamente
         InvokeRepeating("UpdateAnimation", 1f, 0.3f);   //Atualizando a animação do guarda andando
-        //InvokeRepeating("PlaySoundOfficer", 0f, 3f);
+
+        InvokeRepeating("PlaySoundOfficer", 0f, 3f);
     }
     private void Update() {
         float playerDistance = Vector2.Distance(rb.position, transformPlayer.position);
         //Debug.Log("Distância do jogador: " + playerDistance);
         if(playerDistance <= 10f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
-            if(!isChasing)
+            if (!isChasing) {
                 target = transformPlayer;
+                SoundController.GetInstance().PlaySound("guarda_surpreso", gameObject);
+                SoundController.GetInstance().PlaySound("OST_tension", null);
+            }
             isChasing = true;
             speed = speedChasing;
         }
@@ -52,6 +58,13 @@ public class OfficerAI : MonoBehaviour {
             if (isChasing) {
                 patrolPointId = 0;
                 updatePatrolPoint();
+                if (GameController.beginTimer)
+                    SoundController.GetInstance().PlaySound("OST_trilha1_timer", null);
+                else {
+                    if(playerInGrid())   //Se o jogador ainda estiver na área dos guardas
+                        SoundController.GetInstance().PlaySound("OST_trilha1", null);
+                    //transformPlayer.gameObject.GetComponent<Player>().playMusicAfterChase();
+                }
             }
             isChasing = false;
             speed = speedPatrolling;
@@ -143,7 +156,9 @@ public class OfficerAI : MonoBehaviour {
         if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught)
             Debug.Log("Tá tocando!!!");
     }
-    /*
+    
+
+
     private void PlaySoundOfficer() { 
         if (!isChasing) {   //Se o guarda estiver na patrulha
             System.Random random = new System.Random();
@@ -151,17 +166,17 @@ public class OfficerAI : MonoBehaviour {
             if(randNum != 1) { 
                 randNum = random.Next(1, 3);
                 if (randNum == 1) {
-                    SoundController.GetInstance().PlaySound("guarda_assobio", gameObject);
-                    //Debug.Log("assobiou");
+                    SoundController.GetInstance().PlaySound("guarda_assobiando", gameObject);
+                    Debug.Log(gameObject.name + " assobiou!");
                 }
                 else {
                     SoundController.GetInstance().PlaySound("guarda_falando", gameObject);
-                    //Debug.Log("falou");
+                    Debug.Log(gameObject.name + " falou!");
                 }
             }
         }
     }
-    */
+    
 
     private void UpdateAnimation() {
         if(currentWaypoint < path.vectorPath.Count) {

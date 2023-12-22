@@ -9,7 +9,7 @@ public class SoundController : MonoBehaviour {   //Será uma classe Singleton
 
     public Sound[] sounds;
     private Dictionary<string, bool> isPlayingOST = new Dictionary<string, bool> { {"OST_safe", false}, { "OST_trilha1", false }, { "OST_trilha1_timer", false }, { "OST_tension", false }, {"OST_menu", false } };
-    private Dictionary<string, float> volumeOSTs = new Dictionary<string, float> { {"OST_safe", 0.5f }, { "OST_trilha1", 0.5f }, { "OST_trilha1_timer", 0.5f }, { "OST_tension", 0.8f }, {"OST_menu", 1 } };
+    private Dictionary<string, float> volumeOSTs = new Dictionary<string, float> { {"OST_safe", 0.4f }, { "OST_trilha1", 0.4f }, { "OST_trilha1_timer", 0.6f }, { "OST_tension", 0.8f }, {"OST_menu", 1 } };
 
     public static SoundController GetInstance() {
         return instance;

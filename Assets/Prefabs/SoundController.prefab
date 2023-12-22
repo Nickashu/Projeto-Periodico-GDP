@@ -48,46 +48,52 @@ MonoBehaviour:
   - name: OST_safe
     loop: 1
     is3D: 0
+    isOST: 1
     origins: []
     clip: {fileID: 8300000, guid: 68a33b4a4edc52d498f543a48dbba148, type: 3}
-    volume: 0.3
+    volume: 0.4
     pitch: 1
     audioSource: {fileID: 0}
   - name: OST_menu
     loop: 1
     is3D: 0
+    isOST: 1
     origins: []
     clip: {fileID: 8300000, guid: 80ee3560c3e1dda4d8fc1b88b711a1d0, type: 3}
-    volume: 0.8
+    volume: 1
     pitch: 1
     audioSource: {fileID: 0}
   - name: OST_trilha1
     loop: 1
     is3D: 0
+    isOST: 1
     origins: []
     clip: {fileID: 8300000, guid: 4c097cce99938fb4d9e0077085daabdf, type: 3}
-    volume: 0.3
+    volume: 0.4
     pitch: 1
     audioSource: {fileID: 0}
   - name: OST_trilha1_timer
     loop: 1
     is3D: 0
+    isOST: 1
     origins: []
     clip: {fileID: 8300000, guid: e46061f598b4f32468b23aa9cedecf26, type: 3}
-    volume: 0.3
+    volume: 0.6
     pitch: 1
     audioSource: {fileID: 0}
   - name: OST_tension
     loop: 1
     is3D: 0
+    isOST: 1
     origins: []
     clip: {fileID: 8300000, guid: e3bb180d4c9ebe446a6f507e072f37f6, type: 3}
-    volume: 0.5
+    volume: 0.8
     pitch: 1
     audioSource: {fileID: 0}
   - name: corvo_pulo
     loop: 0
     is3D: 1
+    isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: 64717742f387edd4cb8a7465a3b14e8e, type: 3}
     volume: 1
@@ -96,6 +102,7 @@ MonoBehaviour:
   - name: leao_rosnando
     loop: 0
     is3D: 1
+    isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: d1ceee4e367a5d1448f0aadbdfcf3738, type: 3}
     volume: 1
@@ -104,6 +111,7 @@ MonoBehaviour:
   - name: pega_comida
     loop: 0
     is3D: 0
+    isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: 0fe8fcb5b4c491b48b399b8820e193b3, type: 3}
     volume: 0.8
@@ -112,8 +120,45 @@ MonoBehaviour:
   - name: lixo_aberto
     loop: 0
     is3D: 0
+    isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: d50cd7226dc3c0a42a484f478654b665, type: 3}
     volume: 0.5
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: guarda_falando
+    loop: 0
+    is3D: 1
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 6c2f9002d60c64f4e99afed62198ca7e, type: 3}
+    volume: 0.4
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: guarda_assobiando
+    loop: 0
+    is3D: 1
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: eb9a9f7cc983ecb4188171709dc96e12, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: guarda_surpreso
+    loop: 0
+    is3D: 1
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: f2ae18b368227c44ab90d87cd6c16219, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: palhaco_rindo
+    loop: 0
+    is3D: 0
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: c705d5d9e8ad5bb4d9da45beca150233, type: 3}
+    volume: 1
     pitch: 1
     audioSource: {fileID: 0}

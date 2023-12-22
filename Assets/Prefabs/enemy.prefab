@@ -190,8 +190,8 @@ MonoBehaviour:
   - {fileID: 0}
   speedChasing: 11000
   speedPatrolling: 8000
-  maxDownGridY: 42
-  maxRightGridX: 64
+  maxDownGridY: 40
+  maxRightGridX: 48
 --- !u!50 &6265658308193475214
 Rigidbody2D:
   serializedVersion: 4

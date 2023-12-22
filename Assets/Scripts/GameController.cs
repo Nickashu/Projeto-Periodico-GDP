@@ -14,14 +14,14 @@ public class GameController : MonoBehaviour {
     public static List<int> idsNotMeat = new List<int>() { 1, 3, 4, 6 };
 
     public static bool terminouDeFalarCorvo1 = false, falouLeao1=false;    //Aqui ficarão algumas variáveis de diálogo que terão efeitos no jogo
-    public static bool acabouTutorial = false, gamePaused = false, changingLionBar = false, playerCaught = false;
+    public static bool acabouTutorial = false, gamePaused = false, changingLionBar = false, playerCaught = false, beginTimer=false;
     public static float comecoMapaX=0, comecoMapaY=0;
     public static int idComidaLeao = 0, idEnding = -1;
 
-    private float timerGame = 5f * 60f;   //Aqui está o tempo do timer em segundos
+    private float timerGame = 10f;   //Aqui está o tempo do timer em segundos
     private int timerSeconds, timerMinutes;
     private static int numComidasLeao = 0;
-    private static bool completedLionBar = false, beginTimer = false;
+    private static bool completedLionBar = false;
 
     public enum FinaisJogo {
         FinalBom = 0,
@@ -71,6 +71,7 @@ public class GameController : MonoBehaviour {
             canvasTimer.SetActive(true);
             canvasLionBar.SetActive(true);
             beginTimer = true;
+            SoundController.GetInstance().PlaySound("OST_trilha1_timer", null);
         }
 
         if (beginTimer && !gameIsPaused()) {
@@ -101,13 +102,15 @@ public class GameController : MonoBehaviour {
 
     private IEnumerator endGame(bool timeOver) {    //Esta co-rotina será chamada quando terminamos o jogo
         float timeWait = 2f;
-        if (timeOver)
-            timeWait = 4f;
         yield return new WaitForSeconds(timeWait);
-        if(timeOver)
+        if (timeOver) {
+            SoundController.GetInstance().PlaySound("palhaco_rindo", null);
+            yield return new WaitForSeconds(timeWait);
             TransitionsController.GetInstance().LoadLastScene((int)FinaisJogo.FinalRuim);
-        else
+        }
+        else {
             TransitionsController.GetInstance().LoadLastScene((int)FinaisJogo.FinalBom);
+        }
     }
 
     private void updateTimer() {

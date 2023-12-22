@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
 
     public int idFood = 0;
     private float speed = 3.5f, maxStamina, currentStamina, recoverStaminaTax=15f, loseStaminaTax=20f;   //recoverStaminaTax e loseStaminaTax representam, respectivamente, a taxa de recuperação e perda de stamina por segundo
-    private bool isRunning = false, hasFood = false, isMoving = false, recoveringStamina = false;
+    private bool isRunning = false, hasFood = false, isMoving = false, recoveringStamina = false, isInOfficerArea=false;
     private int contInteracoes = 0, limitInteractionsTutorial=1, lives;    //qntFood representa quantas comidas pegamos durante o jogo
 
     public TextMeshProUGUI txtTutorialInteractions;
@@ -155,7 +155,9 @@ public class Player : MonoBehaviour {
             }
 
             if(collision.tag == "AreaGuardas") {   //Se entramos na área que tem guardas
-                SoundController.GetInstance().PlaySound("OST_trilha1", null);
+                isInOfficerArea = true;
+                if (!GameController.beginTimer)
+                    SoundController.GetInstance().PlaySound("OST_trilha1", null);
             }
             if (collision.gameObject.layer == LayerMask.NameToLayer("Leao")) {   //Se entramos na hitbox do leão
                 SoundController.GetInstance().PlaySound("leao_rosnando", collision.gameObject);
@@ -183,9 +185,18 @@ public class Player : MonoBehaviour {
 
 
             if (collision.tag == "AreaGuardas") {   //Se saímos da área que tem guardas
-                SoundController.GetInstance().PlaySound("OST_safe", null);
+                isInOfficerArea = false;
+                if (!GameController.beginTimer)
+                    SoundController.GetInstance().PlaySound("OST_safe", null);
             }
         }
+    }
+
+    public void playMusicAfterChase() {
+        if (isInOfficerArea)
+            SoundController.GetInstance().PlaySound("OST_trilha1", null);
+        else
+            SoundController.GetInstance().PlaySound("OST_safe", null);
     }
 
 

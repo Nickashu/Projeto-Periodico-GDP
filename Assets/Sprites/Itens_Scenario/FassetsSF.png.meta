@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: b7f9139cf26474c4f971d02d5c8e4098
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FassetsSF_0
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1525
+        width: 307
+        height: 382
+      alignment: 9
+      pivot: {x: 0.4516982, y: 0.14578328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31889a346b0de4a4f8770cb33e9247eb
+      internalID: 2009272889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_1
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 1535
+        width: 221
+        height: 358
+      alignment: 9
+      pivot: {x: 0.49161276, y: 0.14792466}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23d3a740a8e8cd40a515398dc54ce5f
+      internalID: -866275265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_2
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1545
+        width: 219
+        height: 354
+      alignment: 9
+      pivot: {x: 0.50846356, y: 0.1544186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec7466a57854b44a80cb2dd41ce9306
+      internalID: 1531186000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_3
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1532
+        width: 218
+        height: 365
+      alignment: 9
+      pivot: {x: 0.50000054, y: 0.14959867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7bcce0f30208c48b2ee87269aa7b8a
+      internalID: 1707863817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1074
+        width: 239
+        height: 302
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13174054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3766bf8cd29c3b149a5386844f89621c
+      internalID: -60804181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_5
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 1098
+        width: 207
+        height: 275
+      alignment: 9
+      pivot: {x: 0.49104553, y: 0.11580478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c658ad093bfe75d47b454a90af086d1d
+      internalID: -1408155682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_6
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1058
+        width: 205
+        height: 374
+      alignment: 9
+      pivot: {x: 0.4728742, y: 0.13325019}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5200c8a8077ea342a4dc5d80c534d4e
+      internalID: 641318000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_7
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1134
+        width: 341
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14683d8a86c85b4eadb3c9197780eea
+      internalID: -689101959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 660
+        width: 376
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e57c9bd9bcbc346a5a0d5509f2f4e1
+      internalID: 902162902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_9
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 686
+        width: 209
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738325182d739074aa05d587e1e80b72
+      internalID: -1355211843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_10
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 697
+        width: 228
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cf1e45a5f46d84c9941d862f9fc12f
+      internalID: 304446428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_12
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 707
+        width: 297
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7d458aa7b2fc04a81c8ccd36a22f72
+      internalID: 183352370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_13
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 223
+        width: 238
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4becb0cbfab0b954ab1ae9649fe6ce93
+      internalID: -597366584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_14
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 223
+        width: 241
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4759d561385c84194845dbc8bc777b
+      internalID: -1013296179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_15
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 168
+        width: 203
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5de829c2d44344cbe9dd5d36b0a48c
+      internalID: -1335581043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSF_16
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 156
+        width: 338
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfdde7974f534249be3d0eb52def27f
+      internalID: 9798402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FassetsSF_0: 2009272889
+      FassetsSF_1: -866275265
+      FassetsSF_10: 304446428
+      FassetsSF_11: 184259893
+      FassetsSF_12: 183352370
+      FassetsSF_13: -597366584
+      FassetsSF_14: -1013296179
+      FassetsSF_15: -1335581043
+      FassetsSF_16: 9798402
+      FassetsSF_17: 620857542
+      FassetsSF_18: 1212026065
+      FassetsSF_19: 1632527612
+      FassetsSF_2: 1531186000
+      FassetsSF_3: 1707863817
+      FassetsSF_4: -60804181
+      FassetsSF_5: -1408155682
+      FassetsSF_6: 641318000
+      FassetsSF_7: -689101959
+      FassetsSF_8: 902162902
+      FassetsSF_9: -1355211843
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

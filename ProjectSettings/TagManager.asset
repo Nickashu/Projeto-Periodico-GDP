@@ -4,9 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - HitboxDialogo
   - NPC
-  - Item
+  - TrashOpened
+  - TrashClosed
+  - Donut
+  - Espeto
+  - Pipoca
+  - Racao
+  - Salsichao
+  - Sorvete
+  - ComidaBoca
+  - AreaGuardas
   layers:
   - Default
   - TransparentFX
@@ -15,11 +23,11 @@ TagManager:
   - Water
   - UI
   - HitBoxDialogue
-  - Item
-  - 
-  - 
-  - 
-  - 
+  - Food
+  - Non-Wakable
+  - Corvo
+  - Leao
+  - FoodDropped
   - 
   - 
   - 

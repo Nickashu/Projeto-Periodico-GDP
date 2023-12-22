@@ -20,7 +20,8 @@ public class MenuControllerScript : MonoBehaviour
     //funcao usada no botao de comecar
     public void StartButtonFunction()
     {
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
+        TransitionsController.GetInstance().LoadNextScene();
     }
 
     //funcao usada no botao de mostrar controles

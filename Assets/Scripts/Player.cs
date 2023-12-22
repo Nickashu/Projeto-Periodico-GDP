@@ -160,7 +160,7 @@ public class Player : MonoBehaviour {
                     SoundController.GetInstance().PlaySound("OST_trilha1", null);
             }
             if (collision.gameObject.layer == LayerMask.NameToLayer("Leao")) {   //Se entramos na hitbox do leão
-                SoundController.GetInstance().PlaySound("leao_rosnando", collision.gameObject);
+                SoundController.GetInstance().PlaySound("leao_rosnando", collision.transform.parent.GetChild(1).gameObject);   //Pegando o objeto do leão e tocando o som
             }
         }
     }

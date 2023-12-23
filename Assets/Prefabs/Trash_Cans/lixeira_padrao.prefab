@@ -216,9 +216,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6820673111648937403}
   - component: {fileID: 6820673111648937402}
-  - component: {fileID: 6820673111648937401}
   - component: {fileID: 6820673111648937400}
   - component: {fileID: 6820673111648937404}
+  - component: {fileID: 3007412962192863418}
   m_Layer: 8
   m_Name: lixeira_padrao
   m_TagString: TrashClosed
@@ -284,7 +284,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1069304284, guid: af0a4db332b2fe84e887446bec6d7a5a, type: 3}
+  m_Sprite: {fileID: 148584139, guid: d0dfbdd00686c90458f0ac02bc12a8af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -295,27 +295,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!95 &6820673111648937401
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6820673111648937399}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7e7c3db82b7835e4fb10951c2835a165, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &6820673111648937400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -329,10 +308,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.047403693, y: 0.12787375}
+  m_Offset: {x: 0.02278781, y: 0.21241036}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5000001, y: 0.22835048}
+    pivot: {x: 0.4965027, y: 0.21522911}
     oldSize: {x: 2.55, y: 3.5701168}
     newSize: {x: 2.55, y: 3.5701168}
     adaptiveTilingThreshold: 0.5
@@ -340,7 +319,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6745694, y: 0.92167896}
+  m_Size: {x: 1.6253376, y: 0.6968985}
   m_EdgeRadius: 0
 --- !u!114 &6820673111648937404
 MonoBehaviour:
@@ -357,6 +336,27 @@ MonoBehaviour:
   food: {fileID: 6820673111816988264}
   searchBar: {fileID: 6513438521002883537}
   idFood: 1
+--- !u!95 &3007412962192863418
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820673111648937399}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c59e7cb2d1959944ca5e9e196e096d1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6820673111816988264
 GameObject:
   m_ObjectHideFlags: 0

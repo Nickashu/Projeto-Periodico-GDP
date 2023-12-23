@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af0a4db332b2fe84e887446bec6d7a5a
+guid: d0dfbdd00686c90458f0ac02bc12a8af
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_0
+      name: FassetsSFaddsombra_0
       rect:
         serializedVersion: 2
         x: 137
@@ -113,83 +113,83 @@ TextureImporter:
         width: 309
         height: 406
       alignment: 9
-      pivot: {x: 0.46730757, y: 0.15165612}
+      pivot: {x: 0.41745016, y: 0.18586348}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e5998514953699418541bec8572e29c
-      internalID: 857870988
+      spriteID: 8c1f187aab94b524497f54771af5beb1
+      internalID: 2134970183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_1
+      name: FassetsSFaddsombra_1
       rect:
         serializedVersion: 2
         x: 652
         y: 1509
         width: 223
         height: 385
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5076258, y: 0.19523038}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfadaf4c28be9eb4aac33a717d944763
-      internalID: -1925560346
+      spriteID: 3529ad45a50beba4dab1bbfaa5b9d058
+      internalID: 1870729870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_2
+      name: FassetsSFaddsombra_2
       rect:
         serializedVersion: 2
         x: 1080
         y: 1509
         width: 293
         height: 391
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.47098058, y: 0.18685968}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2336b5ce912e94a419594b8022d525bd
-      internalID: -1973412084
+      spriteID: 9f9c9c57706579b46b0e9b13cf5286dd
+      internalID: 2039937632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_3
+      name: FassetsSFaddsombra_3
       rect:
         serializedVersion: 2
         x: 1566
         y: 1489
         width: 297
         height: 409
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.44846866, y: 0.21727203}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3f71a121229414baf0dcf455918800
-      internalID: -269089786
+      spriteID: 123b051aef74cf94e8b732976d050c4a
+      internalID: -1317012173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_4
+      name: FassetsSFaddsombra_4
       rect:
         serializedVersion: 2
         x: 1130
@@ -197,20 +197,20 @@ TextureImporter:
         width: 214
         height: 418
       alignment: 9
-      pivot: {x: 0.5125282, y: 0.19212319}
+      pivot: {x: 0.4896976, y: 0.15715852}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4288686ebc7e11145a5502e08b5aee1b
-      internalID: -34982266
+      spriteID: 35d3fa823ea66164b9da58bec232abe0
+      internalID: -1405739265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_6
+      name: FassetsSFaddsombra_6
       rect:
         serializedVersion: 2
         x: 154
@@ -218,104 +218,104 @@ TextureImporter:
         width: 255
         height: 357
       alignment: 9
-      pivot: {x: 0.5000001, y: 0.22835048}
+      pivot: {x: 0.4965027, y: 0.21522911}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0502d555778f43544b011dcdf9716f08
-      internalID: 1069304284
+      spriteID: 4fb1961c52257be4cb8521f66f8626d1
+      internalID: 148584139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_7
+      name: FassetsSFaddsombra_7
       rect:
         serializedVersion: 2
         x: 650
         y: 1059
         width: 216
         height: 315
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50412834, y: 0.17442879}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b69c67944ccf334bb26cfca9144778e
-      internalID: 375982474
+      spriteID: fcaae22cec2ba0e4b957948f40f0f4f3
+      internalID: 433069262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_8
+      name: FassetsSFaddsombra_8
       rect:
         serializedVersion: 2
         x: 1539
         y: 1100
         width: 341
         height: 248
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5052358, y: 0.24080436}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e3d2c53d51370f49a436ca352368894
-      internalID: 639248218
+      spriteID: 04de51e9925e1084cbb37eb2d3e0eec8
+      internalID: -1883680536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_10
+      name: FassetsSFaddsombra_10
       rect:
         serializedVersion: 2
         x: 2090
         y: 1015
         width: 262
         height: 393
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45060438, y: 0.17728399}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21046fb062f3eb469fbe9530d69d8f3
-      internalID: -225922344
+      spriteID: 9df7e2dec7b08554b9b5da59817af103
+      internalID: -1203256130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_11
+      name: FassetsSFaddsombra_11
       rect:
         serializedVersion: 2
         x: 93
         y: 659
         width: 378
         height: 202
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50417477, y: 0.21876693}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 848c38b266f71384d927ac7da74416e1
-      internalID: -1879533291
+      spriteID: f341e3aa12e35fe4291c85b0f813335a
+      internalID: 1328181527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_12
+      name: FassetsSFaddsombra_12
       rect:
         serializedVersion: 2
         x: 649
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da355bcd0425fdf4fafa5dc2085c35ac
-      internalID: -1549514478
+      spriteID: 884dc761abbfab849ba95cf0b9d8d2ab
+      internalID: -1971568532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_13
+      name: FassetsSFaddsombra_13
       rect:
         serializedVersion: 2
         x: 1214
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24b269a8491ac224c9f5e61578dc4814
-      internalID: 184925029
+      spriteID: 8a6da2d5a6fc9b64fa6890122ca9a44d
+      internalID: 1773366675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_14
+      name: FassetsSFaddsombra_14
       rect:
         serializedVersion: 2
         x: 1548
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5252657e4ad15a64caee322008edd238
-      internalID: -928587447
+      spriteID: d07a96262bdf5b44aa9515e58a4ebe84
+      internalID: -926882215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_15
+      name: FassetsSFaddsombra_15
       rect:
         serializedVersion: 2
         x: 151
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdd8028459f52254bac5ff30c0c64c92
-      internalID: -598527379
+      spriteID: 7a41bc9b4ceb3494a81e96329610f511
+      internalID: -1037577972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_16
+      name: FassetsSFaddsombra_16
       rect:
         serializedVersion: 2
         x: 640
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 005bdc43f89ccf74e9a29f723d491fd6
-      internalID: 1942878186
+      spriteID: f0134922f1143fe41952cc52900add1e
+      internalID: -398118768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_17
+      name: FassetsSFaddsombra_17
       rect:
         serializedVersion: 2
         x: 1123
@@ -434,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49fdb39b12f7a7f4ab595ba9f1ed3432
-      internalID: 621743616
+      spriteID: 65d0666fb6366f84b937fc5c1ee733af
+      internalID: -1416965821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FassetsSFadd_sombra (1)_18
+      name: FassetsSFaddsombra_18
       rect:
         serializedVersion: 2
         x: 1515
@@ -455,8 +455,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7adacd52759d675458059e1b5be7090d
-      internalID: 292246224
+      spriteID: c85c34480bb125f429839e1fae5d70d4
+      internalID: -106152004
       vertices: []
       indices: 
       edges: []
@@ -472,25 +472,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FassetsSFadd_sombra (1)_0: 857870988
-      FassetsSFadd_sombra (1)_1: -1925560346
-      FassetsSFadd_sombra (1)_10: -225922344
-      FassetsSFadd_sombra (1)_11: -1879533291
-      FassetsSFadd_sombra (1)_12: -1549514478
-      FassetsSFadd_sombra (1)_13: 184925029
-      FassetsSFadd_sombra (1)_14: -928587447
-      FassetsSFadd_sombra (1)_15: -598527379
-      FassetsSFadd_sombra (1)_16: 1942878186
-      FassetsSFadd_sombra (1)_17: 621743616
-      FassetsSFadd_sombra (1)_18: 292246224
-      FassetsSFadd_sombra (1)_2: -1973412084
-      FassetsSFadd_sombra (1)_3: -269089786
-      FassetsSFadd_sombra (1)_4: -34982266
-      FassetsSFadd_sombra (1)_5: 1353240397
-      FassetsSFadd_sombra (1)_6: 1069304284
-      FassetsSFadd_sombra (1)_7: 375982474
-      FassetsSFadd_sombra (1)_8: 639248218
-      FassetsSFadd_sombra (1)_9: 1158692385
+      FassetsSFaddsombra_0: 2134970183
+      FassetsSFaddsombra_1: 1870729870
+      FassetsSFaddsombra_10: -1203256130
+      FassetsSFaddsombra_11: 1328181527
+      FassetsSFaddsombra_12: -1971568532
+      FassetsSFaddsombra_13: 1773366675
+      FassetsSFaddsombra_14: -926882215
+      FassetsSFaddsombra_15: -1037577972
+      FassetsSFaddsombra_16: -398118768
+      FassetsSFaddsombra_17: -1416965821
+      FassetsSFaddsombra_18: -106152004
+      FassetsSFaddsombra_2: 2039937632
+      FassetsSFaddsombra_3: -1317012173
+      FassetsSFaddsombra_4: -1405739265
+      FassetsSFaddsombra_5: -1311331256
+      FassetsSFaddsombra_6: 148584139
+      FassetsSFaddsombra_7: 433069262
+      FassetsSFaddsombra_8: -1883680536
+      FassetsSFaddsombra_9: -531621777
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

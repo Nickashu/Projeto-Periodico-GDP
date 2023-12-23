@@ -155,11 +155,11 @@ public class OfficerAI : MonoBehaviour {
             int randNum = random.Next(1, 6);
             if (randNum == 5) {
                 SoundController.GetInstance().PlaySound("guarda_falando", gameObject);
-                Debug.Log(gameObject.name + " falou!");
+                //Debug.Log(gameObject.name + " falou!");
             }
             else {
                 SoundController.GetInstance().PlaySound("guarda_assobiando", gameObject);
-                Debug.Log(gameObject.name + " assobiou!");
+                //Debug.Log(gameObject.name + " assobiou!");
             }
         }
     }

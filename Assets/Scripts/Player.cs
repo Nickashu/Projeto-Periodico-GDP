@@ -134,7 +134,7 @@ public class Player : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (!GameController.gameIsPaused()) {
             if (GameController.tagsInteractable.Contains(collision.tag)) {
-                Debug.Log("Entrou na hitbox de interação");
+                //Debug.Log("Entrou na hitbox de interação");
                 if (contInteracoes <= limitInteractionsTutorial)
                     txtTutorialInteractions.gameObject.SetActive(true);
             }
@@ -160,7 +160,7 @@ public class Player : MonoBehaviour {
                     int randomValueFoodDialogue = randFoodInt(this.idFood);
                     DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("updateComida", randomValueFoodDialogue);
                 }
-                Debug.Log("Tocou comida!!");
+                //Debug.Log("Tocou comida!!");
             }
 
             if(collision.tag == "AreaGuardas") {   //Se entramos na área que tem guardas
@@ -179,7 +179,7 @@ public class Player : MonoBehaviour {
             if (GameController.tagsInteractable.Contains(collision.tag)) {
                 if (contInteracoes <= limitInteractionsTutorial)
                     txtTutorialInteractions.gameObject.SetActive(false);
-                Debug.Log("Saiu da hitbox de interação");
+                //Debug.Log("Saiu da hitbox de interação");
             }
             if (collision.tag == "NPC") {
                 triggerDialogue = null;
@@ -245,18 +245,16 @@ public class Player : MonoBehaviour {
                     this.food.gameObject.GetComponent<Food>().isLixo = false;
                     this.food.SetActive(true);
                     SoundController.GetInstance().PlaySound("drop_comida", null);
-                    Debug.Log("Dropou a comida!");
+                    //Debug.Log("Dropou a comida!");
                 }
                 this.food = null;
             }
-            else
-                Debug.Log("Não tem comida!");
         }
     }
     
     private void changeAnimationFood(GameObject objFood, bool drop) {   //Se drop for true, quer dizer que o jogador está tentando dropar a comida atual
         if(drop) {   //Entra aqui se estiver dropando a comida
-            Debug.Log("Dropou a comida!");
+            //Debug.Log("Dropou a comida!");
             anim.SetInteger("food", 0);
         }
         else {
@@ -282,7 +280,7 @@ public class Player : MonoBehaviour {
         lives--;
         updateCanvasVida();
         if(lives == 0) {
-            Debug.Log("Morreu");
+            //Debug.Log("Morreu");
             TransitionsController.GetInstance().LoadLastScene((int)GameController.FinaisJogo.GameOver);
         }
         else

@@ -234,6 +234,7 @@ public class Player : MonoBehaviour {
                     this.food.transform.position = (Vector2)gameObject.transform.position - positionFood * 1.5f;
                     this.food.gameObject.GetComponent<Food>().isLixo = false;
                     this.food.SetActive(true);
+                    SoundController.GetInstance().PlaySound("drop_comida", null);
                     Debug.Log("Dropou a comida!");
                 }
                 this.food = null;

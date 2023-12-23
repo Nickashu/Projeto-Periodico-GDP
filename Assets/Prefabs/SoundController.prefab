@@ -171,3 +171,21 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     audioSource: {fileID: 0}
+  - name: drop_comida
+    loop: 0
+    is3D: 0
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 0567625cc0ed83c44a92308815ccd737, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: skip_dialogo
+    loop: 0
+    is3D: 0
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 89eb5a63425ff0e478876fb5394ba212, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}

@@ -96,7 +96,7 @@ MonoBehaviour:
     isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: 64717742f387edd4cb8a7465a3b14e8e, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     audioSource: {fileID: 0}
   - name: leao_rosnando
@@ -123,7 +123,7 @@ MonoBehaviour:
     isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: 0fe8fcb5b4c491b48b399b8820e193b3, type: 3}
-    volume: 0.8
+    volume: 0.6
     pitch: 1
     audioSource: {fileID: 0}
   - name: lixo_aberto
@@ -132,7 +132,7 @@ MonoBehaviour:
     isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: d50cd7226dc3c0a42a484f478654b665, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     audioSource: {fileID: 0}
   - name: guarda_falando
@@ -159,7 +159,7 @@ MonoBehaviour:
     isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: f2ae18b368227c44ab90d87cd6c16219, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     audioSource: {fileID: 0}
   - name: palhaco_rindo
@@ -177,7 +177,7 @@ MonoBehaviour:
     isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: 0567625cc0ed83c44a92308815ccd737, type: 3}
-    volume: 1
+    volume: 0.9
     pitch: 1
     audioSource: {fileID: 0}
   - name: skip_dialogo
@@ -185,8 +185,8 @@ MonoBehaviour:
     is3D: 0
     isOST: 0
     origins: []
-    clip: {fileID: 8300000, guid: 89eb5a63425ff0e478876fb5394ba212, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: b3530fc328cff05409eb77732dd52ddd, type: 3}
+    volume: 0.8
     pitch: 1
     audioSource: {fileID: 0}
   - name: btn_click
@@ -195,6 +195,15 @@ MonoBehaviour:
     isOST: 0
     origins: []
     clip: {fileID: 8300000, guid: 11a51395635a37144bda098fa08e5c7b, type: 3}
-    volume: 1
+    volume: 0.8
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: gato_capturado
+    loop: 0
+    is3D: 0
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 68939508ffd94f5438c886b609d5edd9, type: 3}
+    volume: 0.7
     pitch: 1
     audioSource: {fileID: 0}

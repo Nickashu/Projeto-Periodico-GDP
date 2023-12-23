@@ -83,10 +83,10 @@ public class DialogueController : MonoBehaviour {    //Esta classe será única pa
         }
         else {
             if (dialogue.currentChoices.Count == 0) {
+                SoundController.GetInstance().PlaySound("skip_dialogo", null);
                 if (!dialogue.canContinue)     //Se estiver no final do diálogo
                     EndDialogue();
                 else {
-                    SoundController.GetInstance().PlaySound("skip_dialogo", null);
                     dialogue.Continue();
                     StartCoroutine(PrintDialogue());
                 }

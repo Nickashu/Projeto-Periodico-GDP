@@ -189,3 +189,12 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     audioSource: {fileID: 0}
+  - name: btn_click
+    loop: 0
+    is3D: 0
+    isOST: 0
+    origins: []
+    clip: {fileID: 8300000, guid: 11a51395635a37144bda098fa08e5c7b, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}

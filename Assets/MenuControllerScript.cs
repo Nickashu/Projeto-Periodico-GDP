@@ -20,13 +20,14 @@ public class MenuControllerScript : MonoBehaviour
     //funcao usada no botao de comecar
     public void StartButtonFunction()
     {
-        //SceneManager.LoadScene(1);
+        SoundController.GetInstance().PlaySound("btn_click", null);
         TransitionsController.GetInstance().LoadNextScene();
     }
 
     //funcao usada no botao de mostrar controles
     public void ControlsButtonFunction()
     {
+        SoundController.GetInstance().PlaySound("btn_click", null);
         MainMenu.SetActive(false);
         ControlsDisplay.SetActive(true);
     }
@@ -34,6 +35,7 @@ public class MenuControllerScript : MonoBehaviour
     //funcao usada no botao de mostrar creditos
     public void CreditsButtonFunction()
     {
+        SoundController.GetInstance().PlaySound("btn_click", null);
         MainMenu.SetActive(false);
         CreditsDisplay.SetActive(true);
     }
@@ -47,6 +49,7 @@ public class MenuControllerScript : MonoBehaviour
     //funcao usada no botao de retornar pro menu principal
     public void ReturnButtonFunction()
     {
+        SoundController.GetInstance().PlaySound("btn_click", null);
         MainMenu.SetActive(true);
         CreditsDisplay.SetActive(false);
         ControlsDisplay.SetActive(false);

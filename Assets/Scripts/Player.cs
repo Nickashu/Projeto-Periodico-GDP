@@ -12,12 +12,18 @@ public class Player : MonoBehaviour {
     private GameObject food, NPCDialogue=null, barStamina;
 
     public int idFood = 0;
-    private float speed = 3.5f, maxStamina, currentStamina, recoverStaminaTax=15f, loseStaminaTax=20f;   //recoverStaminaTax e loseStaminaTax representam, respectivamente, a taxa de recuperação e perda de stamina por segundo
+    private float speed = 3.5f, maxStamina, currentStamina;
     private bool isRunning = false, hasFood = false, isMoving = false, recoveringStamina = false, isInOfficerArea=false;
     private int contInteracoes = 0, limitInteractionsTutorial=1, lives;    //qntFood representa quantas comidas pegamos durante o jogo
 
     public TextMeshProUGUI txtTutorialInteractions;
     public GameObject outerBarStamina, canvasLives;
+
+    //recoverStaminaTax e loseStaminaTax representam, respectivamente, a taxa de recuperação e perda de stamina por segundo
+    [SerializeField]
+    private float recoverStaminaTax = 20f;
+    [SerializeField]
+    private float loseStaminaTax = 15f;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -69,8 +75,12 @@ public class Player : MonoBehaviour {
             }
 
             if (Input.GetKey(KeyCode.Z)) {
-                if (scriptTrash != null)
-                    scriptTrash.startSearchingFood();
+                if (scriptTrash != null) {
+                    if(!GameController.gameIsPaused())
+                        scriptTrash.startSearchingFood();
+                    else
+                        scriptTrash.stopSearchingFood();
+                }
             }
 
             if (Input.GetKeyUp(KeyCode.Z)) {

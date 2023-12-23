@@ -5,11 +5,12 @@ using UnityEngine;
 public class Lion_Bar : MonoBehaviour {
 
     private float totalWidth, barWidth, durationAnimationBar=1f;
-    public GameObject bar, pointsFood, lion;
+    public GameObject bar, pointsFood;
+    public DialogueTrigger lionDialogue;
 
     void Start() {
         barWidth = bar.GetComponent<RectTransform>().rect.width;
-        totalWidth = gameObject.GetComponent<RectTransform>().rect.width;
+        totalWidth = bar.transform.parent.GetComponent<RectTransform>().rect.width;
     }
 
     public void changeBar(int points) {
@@ -63,7 +64,6 @@ public class Lion_Bar : MonoBehaviour {
 
     private IEnumerator triggerLastDialogue() {
         yield return new WaitForSeconds(2f);
-        DialogueTrigger dialogueLion = lion.GetComponent<DialogueTrigger>();
-        dialogueLion.TriggerDialogue();   //Falando com o leão pela última vez
+        lionDialogue.TriggerDialogue();   //Falando com o leão pela última vez
     }
 }

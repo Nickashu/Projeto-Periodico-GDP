@@ -2,7 +2,6 @@ using UnityEngine;
 using Pathfinding;
 using System.Collections.Generic;
 using System.Collections;
-using UnityEngine.UIElements;
 
 public class OfficerAI : MonoBehaviour {
     private Transform target;   //target representa a posição para a qual o guarda está indo
@@ -26,6 +25,8 @@ public class OfficerAI : MonoBehaviour {
     private Seeker seekerScript;
     private Rigidbody2D rb;
 
+    [SerializeField]
+    private float minDistPlayer = 13f;
 
     private void Start() {
         seekerScript = GetComponent<Seeker>();
@@ -34,18 +35,16 @@ public class OfficerAI : MonoBehaviour {
         scriptPlayer = transformPlayer.gameObject.GetComponent<Player>();
 
         patrolPointId = 0;
-        //timeSoundSurprise = intervalSoundSurprise;
         updatePatrolPoint();
 
         InvokeRepeating("UpdatePath", 0f, 0.1f);   //Inicializando um caminho para o guarda seguir e fazendo este caminho ser calculado continuamente
         InvokeRepeating("UpdateAnimation", 1f, 0.3f);   //Atualizando a animação do guarda andando
-
         InvokeRepeating("PlaySoundOfficer", 0f, 3f);
     }
     private void Update() {
         float playerDistance = Vector2.Distance(rb.position, transformPlayer.position);
         //Debug.Log("Distância do jogador: " + playerDistance);
-        if(playerDistance <= 10f && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
+        if(playerDistance <= minDistPlayer && playerInGrid()) {    //Se a dsistância do guarda para o jogador for de menos de 20 e o jogador estiver na área do grid
             if (!isChasing && !GameController.gameIsPaused()) {
                 target = transformPlayer;
                 SoundController.GetInstance().PlaySound("guarda_surpreso", gameObject);
@@ -63,11 +62,14 @@ public class OfficerAI : MonoBehaviour {
                 else {
                     if(playerInGrid())   //Se o jogador ainda estiver na área dos guardas
                         SoundController.GetInstance().PlaySound("OST_trilha1", null);
-                    //transformPlayer.gameObject.GetComponent<Player>().playMusicAfterChase();
                 }
             }
             isChasing = false;
             speed = speedPatrolling;
+        }
+
+        if(playerDistance <= 1.4f && !GameController.playerCaught) {
+            GameController.playerCaught = true;
         }
     }
 
@@ -103,8 +105,6 @@ public class OfficerAI : MonoBehaviour {
                         if (distance < nextWaypointDistance)
                             currentWaypoint++;
                     }
-                    //rb.MovePosition(rb.position + movementForce);
-                    //rb.velocity = movementForce;
                     rb.AddForce(movementForce);   //Fazendo o guarda se mover através do RigidBody2D
                 }
             }
@@ -148,31 +148,17 @@ public class OfficerAI : MonoBehaviour {
         scriptPlayer.looseLife();   //Fazendo o jogador perder uma vida e voltar ao início do mapa
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught)
-            GameController.playerCaught = true;
-    }
-    private void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.tag.Equals("Player") && !GameController.playerCaught)
-            Debug.Log("Tá tocando!!!");
-    }
-    
-
-
     private void PlaySoundOfficer() { 
         if (!isChasing && !GameController.gameIsPaused()) {   //Se o guarda estiver na patrulha
             System.Random random = new System.Random();
-            int randNum = random.Next(1, 4);
-            if(randNum != 1) { 
-                randNum = random.Next(1, 3);
-                if (randNum == 1) {
-                    SoundController.GetInstance().PlaySound("guarda_assobiando", gameObject);
-                    Debug.Log(gameObject.name + " assobiou!");
-                }
-                else {
-                    SoundController.GetInstance().PlaySound("guarda_falando", gameObject);
-                    Debug.Log(gameObject.name + " falou!");
-                }
+            int randNum = random.Next(1, 6);
+            if (randNum == 5) {
+                SoundController.GetInstance().PlaySound("guarda_falando", gameObject);
+                Debug.Log(gameObject.name + " falou!");
+            }
+            else {
+                SoundController.GetInstance().PlaySound("guarda_assobiando", gameObject);
+                Debug.Log(gameObject.name + " assobiou!");
             }
         }
     }

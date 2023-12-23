@@ -49,9 +49,14 @@ public class SoundController : MonoBehaviour {   //Será uma classe Singleton
                     s.audioSource.loop = s.loop;
                     s.audioSource.playOnAwake = false;    //Sons que tocam logo no início serão adicionados diretamente aos seus gameObjects
                     if (s.is3D) {
+                        float minDistance = 3f, maxDistance=25f;
+                        if (s.name.Contains("guarda")) {
+                            minDistance = 10f;
+                            maxDistance = 28f;
+                        }
                         s.audioSource.spatialBlend = 1f;
-                        s.audioSource.maxDistance = 25f;
-                        s.audioSource.minDistance = 3f;
+                        s.audioSource.maxDistance = maxDistance;
+                        s.audioSource.minDistance = minDistance;
                         s.audioSource.rolloffMode = AudioRolloffMode.Linear;
                     }
                 }

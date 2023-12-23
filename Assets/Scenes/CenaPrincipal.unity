@@ -8195,6 +8195,8 @@ MonoBehaviour:
   txtTutorialInteractions: {fileID: 40515271}
   outerBarStamina: {fileID: 35437572}
   canvasLives: {fileID: 1604919350}
+  recoverStaminaTax: 15
+  loseStaminaTax: 20
 --- !u!114 &956272793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9538,7 +9540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 605299303}
   pointsFood: {fileID: 1900041411}
-  lion: {fileID: 877439456}
+  lionDialogue: {fileID: 705201366}
 --- !u!1001 &1065190408
 PrefabInstance:
   m_ObjectHideFlags: 0

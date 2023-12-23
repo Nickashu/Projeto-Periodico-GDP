@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
     public static float comecoMapaX=0, comecoMapaY=0;
     public static int idComidaLeao = 0, idEnding = -1;
 
-    private float timerGame = 10f;   //Aqui está o tempo do timer em segundos
+    private float timerGame = 6f * 60f;   //Aqui está o tempo do timer em segundos
     private int timerSeconds, timerMinutes;
     private static int numComidasLeao = 0;
     private static bool completedLionBar = false;

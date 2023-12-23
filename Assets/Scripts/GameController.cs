@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-    public GameObject canvasLives, canvasTimer, canvasLionBar;
+    public GameObject canvasLives, canvasTimer, canvasLionBar, canvasPause;
 
     public static List<string> tagsInteractable = new List<string>() { "NPC" };    //Esta lista armazena todas as tags de objetos possíveis de se intergair no jogo
     public static List<string> tagsFoods = new List<string>() { "Donut", "Espeto", "Pipoca", "Racao", "Salsichao", "Sorvete" };    //Esta lista armazena todas as tags de comida
@@ -95,8 +95,18 @@ public class GameController : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Escape))   //Apertar esc para sair do jogo
-            Application.Quit();
+        if (Input.GetKeyDown(KeyCode.Escape)) {    //Apertar esc para sair do jogo
+            if (!canvasPause.activeSelf) {   //Se o jogo não está pausado
+                canvasPause.SetActive(true);
+                SoundController.GetInstance().PauseCurrentTrack();
+                gamePaused = true;
+            }
+            else {
+                canvasPause.SetActive(false);
+                SoundController.GetInstance().ResumeCurrentTrack();
+                gamePaused = false;
+            }
+        }
     }
 
     private IEnumerator endGame(bool timeOver) {    //Esta co-rotina será chamada quando terminamos o jogo
@@ -137,9 +147,20 @@ public class GameController : MonoBehaviour {
         changingLionBar = false;
         playerCaught = false;
         idComidaLeao = 0;
-        //idEnding = -1;
         numComidasLeao = 0;
         completedLionBar = false;
         DialogueController.GetInstance().dialogueVariablesController.ChangeSpecificVariable("resetVariables", null);
+    }
+
+    //Eventos de botões do menu de pause:
+    public void resumeGame() {
+        SoundController.GetInstance().PlaySound("btn_click", null);
+        canvasPause.SetActive(false);
+        SoundController.GetInstance().ResumeCurrentTrack();
+        gamePaused = false;
+    }
+    public void returnToMenu() {
+        SoundController.GetInstance().PlaySound("btn_click", null);
+        TransitionsController.GetInstance().LoadMenu();
     }
 }

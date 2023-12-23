@@ -87,14 +87,8 @@ public class Player : MonoBehaviour {
                 if (scriptTrash != null)
                     scriptTrash.stopSearchingFood();
             }
-
             if (Input.GetKeyUp(KeyCode.C))    //Tecla que será usada para dropar a comida atual
                 dropFood(false);
-
-            //Debug:
-            //if (Input.GetKeyUp(KeyCode.Alpha9))
-            //    DialogueController.GetInstance().dialogueVariablesController.CheckVariableValues();
-
 
             updateStamina();
         }

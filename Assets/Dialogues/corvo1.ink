@@ -27,7 +27,7 @@ Ah! A terrível escuridão que um dia abraça a todos nós. Para sempre. Temo qu
 Você quer dizer… que ele está morto? #character: gato  #state: gato_triste
 Depende do que consideras morto. Ah, não desanimes. Pode ser que seu amigo ainda esteja nesse plano. Há uma chance, mas eu não iria atrás dele se fosse você. Aproveite sua liberdade e saia o quanto antes desse terrível lugar.   #character: corvo  #state: corvo_normal
 Quero encontrar meu amigo. Onde você o viu?   #character: gato  #state: gato_normal
-Hmmm ou és ousado ou completamente louco. O caminho que tu procuras é para lá, após a grande gaiola branca e vermelha. Não digas que eu não te avisei. Cuá. Cuá. #character: corvo  #state: corvo_normal
+Hmmm ou és ousado ou completamente louco. O caminho que tu procuras é para lá, após o grande portão. Não digas que eu não te avisei. Cuá. Cuá. #character: corvo  #state: corvo_normal
 ~ terminouDeFalarCorvo1 = true
 {updateComida(0)}
 -> END

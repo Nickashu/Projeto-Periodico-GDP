@@ -1,0 +1,499 @@
+fileFormatVersion: 2
+guid: af0a4db332b2fe84e887446bec6d7a5a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_0
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1502
+        width: 309
+        height: 406
+      alignment: 9
+      pivot: {x: 0.46730757, y: 0.15165612}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5998514953699418541bec8572e29c
+      internalID: 857870988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_1
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1509
+        width: 223
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfadaf4c28be9eb4aac33a717d944763
+      internalID: -1925560346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_2
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1509
+        width: 293
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2336b5ce912e94a419594b8022d525bd
+      internalID: -1973412084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1489
+        width: 297
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3f71a121229414baf0dcf455918800
+      internalID: -269089786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1015
+        width: 214
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5125282, y: 0.19212319}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4288686ebc7e11145a5502e08b5aee1b
+      internalID: -34982266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_6
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1020
+        width: 255
+        height: 357
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.22835048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0502d555778f43544b011dcdf9716f08
+      internalID: 1069304284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_7
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1059
+        width: 216
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b69c67944ccf334bb26cfca9144778e
+      internalID: 375982474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1100
+        width: 341
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3d2c53d51370f49a436ca352368894
+      internalID: 639248218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1015
+        width: 262
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21046fb062f3eb469fbe9530d69d8f3
+      internalID: -225922344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_11
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 659
+        width: 378
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848c38b266f71384d927ac7da74416e1
+      internalID: -1879533291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_12
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 651
+        width: 258
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da355bcd0425fdf4fafa5dc2085c35ac
+      internalID: -1549514478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 680
+        width: 170
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b269a8491ac224c9f5e61578dc4814
+      internalID: 184925029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 675
+        width: 298
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5252657e4ad15a64caee322008edd238
+      internalID: -928587447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_15
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 188
+        width: 276
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd8028459f52254bac5ff30c0c64c92
+      internalID: -598527379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 195
+        width: 252
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005bdc43f89ccf74e9a29f723d491fd6
+      internalID: 1942878186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 133
+        width: 241
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fdb39b12f7a7f4ab595ba9f1ed3432
+      internalID: 621743616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FassetsSFadd_sombra (1)_18
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 137
+        width: 342
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adacd52759d675458059e1b5be7090d
+      internalID: 292246224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FassetsSFadd_sombra (1)_0: 857870988
+      FassetsSFadd_sombra (1)_1: -1925560346
+      FassetsSFadd_sombra (1)_10: -225922344
+      FassetsSFadd_sombra (1)_11: -1879533291
+      FassetsSFadd_sombra (1)_12: -1549514478
+      FassetsSFadd_sombra (1)_13: 184925029
+      FassetsSFadd_sombra (1)_14: -928587447
+      FassetsSFadd_sombra (1)_15: -598527379
+      FassetsSFadd_sombra (1)_16: 1942878186
+      FassetsSFadd_sombra (1)_17: 621743616
+      FassetsSFadd_sombra (1)_18: 292246224
+      FassetsSFadd_sombra (1)_2: -1973412084
+      FassetsSFadd_sombra (1)_3: -269089786
+      FassetsSFadd_sombra (1)_4: -34982266
+      FassetsSFadd_sombra (1)_5: 1353240397
+      FassetsSFadd_sombra (1)_6: 1069304284
+      FassetsSFadd_sombra (1)_7: 375982474
+      FassetsSFadd_sombra (1)_8: 639248218
+      FassetsSFadd_sombra (1)_9: 1158692385
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

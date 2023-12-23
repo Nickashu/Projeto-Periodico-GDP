@@ -18,12 +18,14 @@ public class Lion : MonoBehaviour {
     }
 
     private void startAttackAnimation() {
-        System.Random random = new System.Random();
-        int randNum = random.Next(1, 4);   //Gerando um número aleatório entre 1 e 3
-        if (randNum == 1) {
-            if (!GameController.beginTimer) {     //Se o tempo não tiver começado a correr
-                SoundController.GetInstance().PlaySound("leao_ataque", gameObject);
-                anim.SetBool("attack", true);
+        if (!GameController.gamePaused) {
+            System.Random random = new System.Random();
+            int randNum = random.Next(1, 4);   //Gerando um número aleatório entre 1 e 3
+            if (randNum == 1) {
+                if (!GameController.beginTimer) {     //Se o tempo não tiver começado a correr
+                    SoundController.GetInstance().PlaySound("leao_ataque", gameObject);
+                    anim.SetBool("attack", true);
+                }
             }
         }
     }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SoundController : MonoBehaviour {   //Será uma classe Singleton
     private static SoundController instance;
@@ -77,7 +78,7 @@ public class SoundController : MonoBehaviour {   //Será uma classe Singleton
                 else {
                     AudioSource[] audios = gameObject.GetComponents<AudioSource>();
                     audios.FirstOrDefault(a => a.clip.name.Equals(soundName)).Play();
-                    Debug.Log(soundName);
+                    //Debug.Log(soundName);
                 }
             }
         }
@@ -137,5 +138,36 @@ public class SoundController : MonoBehaviour {   //Será uma classe Singleton
         }
         if (oldOST != null)
             oldOST.Stop();
+    }
+
+
+    public void PauseCurrentTrack() {
+        string nameOSTPlaying = "";
+        foreach (KeyValuePair<string, bool> valuePair in isPlayingOST) {
+            if (valuePair.Value == true) {
+                nameOSTPlaying = valuePair.Key;   //Pegando o nome da trilha que está tocando
+                break;
+            }
+        }
+        if(nameOSTPlaying != "") {
+            AudioSource[] audios = gameObject.GetComponents<AudioSource>();
+            AudioSource currentTrack = audios.FirstOrDefault(a => a.clip.name.Equals(nameOSTPlaying));
+            currentTrack.Pause();
+        }
+    }
+
+    public void ResumeCurrentTrack() {
+        string nameOSTPlaying = "";
+        foreach (KeyValuePair<string, bool> valuePair in isPlayingOST) {
+            if (valuePair.Value == true) {
+                nameOSTPlaying = valuePair.Key;   //Pegando o nome da trilha que está tocando
+                break;
+            }
+        }
+        if (nameOSTPlaying != "") {
+            AudioSource[] audios = gameObject.GetComponents<AudioSource>();
+            AudioSource currentTrack = audios.FirstOrDefault(a => a.clip.name.Equals(nameOSTPlaying));
+            currentTrack.Play();
+        }
     }
 }

@@ -19,16 +19,17 @@ public class Crow : MonoBehaviour {
 
     void Update() {
         if (!checkFly) {    //Se o corvo não estiver prestes a voar
-            if (!isJumping) {
-                isJumping = true;
-                StartCoroutine(jump());
+            if (!GameController.gameIsPaused()) {
+                if (!isJumping) {
+                    isJumping = true;
+                    StartCoroutine(jump());
+                }
+                //Fazendo o corvo ficar virado para onde o jogador estiver:
+                if (transform.position.x > player.transform.position.x + offSetPlayer)
+                    spriteRenderer.flipX = true;
+                else if (transform.position.x < player.transform.position.x - offSetPlayer)
+                    spriteRenderer.flipX = false;
             }
-            //Fazendo o corvo ficar virado para onde o jogador estiver:
-            if (transform.position.x > player.transform.position.x + offSetPlayer)
-                spriteRenderer.flipX = true;
-            else if (transform.position.x < player.transform.position.x - offSetPlayer)
-                spriteRenderer.flipX = false;
-
 
             //Verificando se o player já deu a comida para o corvo:
             if ((GameController.terminouDeFalarCorvo1 && crowVersion == 1)) {

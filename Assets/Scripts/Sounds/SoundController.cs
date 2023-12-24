@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SoundController : MonoBehaviour {   //Será uma classe Singleton
     private static SoundController instance;
+    public int numTimesMenu = 0;
 
     public Sound[] sounds;
     private Dictionary<string, bool> isPlayingOST = new Dictionary<string, bool> { {"OST_safe", false}, { "OST_trilha1", false }, { "OST_trilha1_timer", false }, { "OST_tension", false }, {"OST_menu", false } };

@@ -32,13 +32,20 @@ public class TransitionsController : MonoBehaviour {
             if (SceneManager.GetActiveScene().name.Contains("Final")) {  //Se tivermos ido para a cena final
                 GameObject objTelaFinal = endings.transform.GetChild(GameController.idEnding).gameObject;
                 objTelaFinal.SetActive(true);   //Ativando a tela final respectiva
-                if(GameController.idEnding != (int)GameController.FinaisJogo.GameOver) {
+                if (GameController.idEnding != (int)GameController.FinaisJogo.GameOver) {
                     for (int i = 0; i < objTelaFinal.transform.childCount; i++) {
                         cutscenes.Add(objTelaFinal.transform.GetChild(i).gameObject);
                     }
                 }
 
                 GameController.resetGame();
+            }
+            else if (SceneManager.GetActiveScene().name.Contains("Menu")) {
+                if (SoundController.GetInstance().numTimesMenu != 0) {
+                    GameController.resetGame();
+                    Debug.Log("resetou variáveis!");
+                }
+                SoundController.GetInstance().numTimesMenu++;
             }
 
             if (cutscenes.Count > 0)   //Se tiverem cutscenes na cena
@@ -96,7 +103,7 @@ public class TransitionsController : MonoBehaviour {
 
     public void LoadNextScene() {
         if(SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1) {    //Se estivermos na última cena
-            Debug.Log("Jogo terminado!");
+            //Debug.Log("Jogo terminado!");
             StartCoroutine(LoadScene(0));   //Carregando a primeira cena novamente
         }
         else
@@ -113,7 +120,7 @@ public class TransitionsController : MonoBehaviour {
     }
     public void LoadMenu() {
         StartCoroutine(LoadScene(0));   //Carregando o menu
-        GameController.resetGame();
+        //GameController.resetGame();
     }
 
 

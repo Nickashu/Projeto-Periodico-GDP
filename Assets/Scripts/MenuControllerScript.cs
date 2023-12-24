@@ -1,22 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuControllerScript : MonoBehaviour
 {
     public GameObject MainMenu, CreditsDisplay, ControlsDisplay;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     //funcao usada no botao de comecar
     public void StartButtonFunction()
     {

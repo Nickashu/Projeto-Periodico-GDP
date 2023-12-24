@@ -112,8 +112,8 @@ public class TransitionsController : MonoBehaviour {
         StartCoroutine(LoadScene(1));   //Carregando a cena principal
     }
     public void LoadMenu() {
-        GameController.resetGame();
         StartCoroutine(LoadScene(0));   //Carregando o menu
+        GameController.resetGame();
     }
 
 

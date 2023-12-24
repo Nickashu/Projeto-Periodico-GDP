@@ -51,7 +51,7 @@ MonoBehaviour:
     isOST: 1
     origins: []
     clip: {fileID: 8300000, guid: 68a33b4a4edc52d498f543a48dbba148, type: 3}
-    volume: 0.4
+    volume: 0.6
     pitch: 1
     audioSource: {fileID: 0}
   - name: OST_menu
@@ -69,7 +69,7 @@ MonoBehaviour:
     isOST: 1
     origins: []
     clip: {fileID: 8300000, guid: 4c097cce99938fb4d9e0077085daabdf, type: 3}
-    volume: 0.4
+    volume: 0.6
     pitch: 1
     audioSource: {fileID: 0}
   - name: OST_trilha1_timer

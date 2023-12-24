@@ -11,7 +11,4 @@ public class GameOver : MonoBehaviour {
         SoundController.GetInstance().PlaySound("btn_click", null);
         TransitionsController.GetInstance().LoadMainScene();
     }
-    public void QuitGame() {
-        Application.Quit();
-    }
 }

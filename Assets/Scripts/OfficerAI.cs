@@ -68,7 +68,7 @@ public class OfficerAI : MonoBehaviour {
             speed = speedPatrolling;
         }
 
-        if(playerDistance <= 1.45f && !GameController.playerCaught) {
+        if(playerDistance <= 1.55f && !GameController.playerCaught) {
             SoundController.GetInstance().PlaySound("gato_capturado", null);
             GameController.playerCaught = true;
         }
